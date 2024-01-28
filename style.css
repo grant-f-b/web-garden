@@ -21,22 +21,16 @@
   }
   
   header {
-    /* gap: 2rem; */
     align-items: center;
     text-align: center;
-
     flex-direction: row;
     margin-bottom: 1.2rem;
     /* height: auto; */
     background: #9acd32;
   }
-/* hr {
-    color: #9acd32;
-  } */
 
 
   footer {
-    /* gap: 2rem; */
     align-items: center;
     text-align: center;
     flex-direction: row;
