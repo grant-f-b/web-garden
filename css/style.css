@@ -29,8 +29,8 @@
     background: #9acd32;
   }
   header a {
-    margin-right: .5em;
-    margin-left: 1em;
+    margin-right: 0em;
+    margin-left: .6em;
     /* display: inline; */
   }
 
