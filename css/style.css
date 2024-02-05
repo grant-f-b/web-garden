@@ -100,11 +100,13 @@
   .s {
     padding-top: 1rem;
     padding-bottom: 1rem;
+    margin-left: 1em;
   }
   
   .s2 {
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
+    margin-left: 3em;
   }
 
 
