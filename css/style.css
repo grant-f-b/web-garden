@@ -131,7 +131,7 @@
     height: 38px;
     background: linear-gradient(to bottom, #fffdd0 0%, #9acd32 100%);
   }
-  div {
+  .ratings-div {
     height: calc(28.55px * (25 + 1));
     overflow: hidden;
   }
