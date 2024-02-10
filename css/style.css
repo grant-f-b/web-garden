@@ -5,10 +5,15 @@
     --text: 1.1rem;
     --text-line-height: 1.2rem;
     --border: 1px solid #333; 
-  
     /** The width of all content on the site **/
     --content-width: 800px;
   }
+
+  /* br{
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+
+  } */
   
   /* body/content */
   body {
@@ -34,7 +39,6 @@
     /* display: inline; */
   }
 
-
   footer {
     align-items: center;
     text-align: center;
@@ -44,15 +48,13 @@
     background: #9acd32;
   }
 
-  
+  /* headers */
   h1 {
     font-size: var(--header-1);
   }
-  
   h2 {
     font-size: var(--header-2);
   }
-  
   h3 {
     font-size: var(--header-3);
   }
@@ -69,19 +71,18 @@
     font-size: var(--text);
     text-decoration: none;
   }
-  
   a:hover {
     text-decoration: underline;
   }
   
   /* tables */
+  /* main tables */
   table {
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
     margin-left: 0.15rem;
     margin-right: 0.15rem;
   }
-  
   tr, th, td {
     border: var(--border);
     padding-top: 0.25rem;
@@ -91,18 +92,56 @@
     font-size: var(--text);
     line-height: var(--text-line-height);
   }
-  
   td {
     min-width: 150px;
   }
+
+  /* ratings tables */
+  .rating {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+  .rating-head {
+    font-weight: bold;
+
+  }
   
+  /* expandable tables */
+  input {
+    display: none; /* Hide the checkbox */
+  }
+  input:checked + div {
+    height: auto; /* Expand the table when checkbox is checked */
+  }
+  input:checked ~ label {
+    transform: rotate(180deg); /* Rotate the label (arrow) */
+    margin-top: 0; /* Adjust spacing */
+  }
+  label {
+    /* Style the label as a button */
+    display: block;
+    font-size: x-large;
+    text-align: center;
+    user-select: none;
+    cursor: pointer;
+    margin-top: 10px; /* Position the label */
+    height: 38px;
+    background: linear-gradient(to bottom, #fffdd0 0%, #9acd32 100%);
+  }
+  div {
+    height: calc(28.55px * (25 + 1));
+    overflow: hidden;
+  }
+
   /* subsections */
   .one {
     padding-top: 1rem;
     padding-bottom: 1rem;
     margin-left: 1em;
   }
-  
   .two {
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
@@ -114,14 +153,11 @@
     text-align: center;
   }
 
+/* lists */
+  li {
+    /* font-size: 14px; */
+    /* margin-left: 10px; */
+    list-style-type: circle;
+ }
 
-/* ??? */
-  /* .posts td {
-    min-width: 150px;
-    text-align: left;
-  } */
-  
-  /* .posts th {
-    text-align: left;
-    font-weight: bold;
-  } */
+/* test */
