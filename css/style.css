@@ -54,6 +54,7 @@
     font-size: var(--header-3);
   }
   
+  /* paragraphs */
   p {
     font-size: var(--text);
     line-height: var(--text-line-height);
