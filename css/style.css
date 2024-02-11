@@ -9,11 +9,6 @@
     --content-width: 800px;
   }
 
-  /* br{
-    margin-top: 0.5rem;
-    margin-bottom: 1rem;
-
-  } */
   
   /* body/content */
   body {
@@ -103,10 +98,18 @@
     margin-left: auto;
     margin-right: auto;
     text-align: center;
+    max-width: var(--content-width);
   }
   .rating-head {
     font-weight: bold;
 
+  }
+  .rating td {
+    min-width: auto;
+  }
+
+  .ratings-div {
+    overflow-x: hidden;
   }
   
   /* expandable tables */
@@ -132,7 +135,7 @@
     background: linear-gradient(to bottom, #fffdd0 0%, #9acd32 100%);
   }
   .ratings-div {
-    height: calc(28.55px * (25 + 1));
+    height: calc(28.2px * (25 + 1));
     overflow: hidden;
   }
 
