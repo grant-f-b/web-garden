@@ -6,7 +6,8 @@
     --text-line-height: 1.2rem;
     --border: 1px solid #333; 
     /** The width of all content on the site **/
-    --content-width: 800px;
+    --content-width: 700px;
+    max-width: 100%;
   }
 
   
@@ -89,7 +90,7 @@
     line-height: var(--text-line-height);
   }
   td {
-    min-width: 150px;
+    min-width: auto;
   }
 
   /* ratings tables */
@@ -100,6 +101,9 @@
     margin-right: auto;
     text-align: center;
     max-width: var(--content-width);
+    overflow:scroll;
+
+
   }
   .rating-head {
     font-weight: bold;
@@ -107,10 +111,6 @@
   }
   .rating td {
     min-width: auto;
-  }
-
-  .ratings-div {
-    overflow-x: hidden;
   }
   
   /* expandable tables */
@@ -136,7 +136,7 @@
     background: linear-gradient(to bottom, #fffdd0 0%, #9acd32 100%);
   }
   .ratings-div {
-    height: calc(28.2px * (25 + 1));
+    height: calc(28.3px * (25 + 1));
     overflow: hidden;
   }
 
