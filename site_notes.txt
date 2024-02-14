@@ -23,7 +23,7 @@ https://marketingpipeline.github.io/Markdown-Tag/ -- md documentation; same as m
 +-----------------------+
 
 ==> GUIDES:	
-=> etensive guides 
+=> extensive guides 
 
 https://developer.mozilla.org/en-US/docs/Web/HTML/Reference -- html documetation
 https://web.stanford.edu/group/csp/cs21/htmlcheatsheet.pdf -- html guide
