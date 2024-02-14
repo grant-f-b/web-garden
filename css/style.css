@@ -6,8 +6,7 @@
     --text-line-height: 1.2rem;
     --border: 1px solid #333; 
     /** The width of all content on the site **/
-    --content-width: 700px;
-    max-width: 100%;
+    --content-width: 800px;
   }
 
   
@@ -161,7 +160,7 @@
   li {
     /* font-size: 14px; */
     /* margin-left: 10px; */
-    list-style-type: circle;
+    list-style-type:circle;
  }
 
 /* test */
