@@ -8,9 +8,34 @@
     /** The width of all content on the site **/
     --content-width: 800px;
   }
-
+  /* headers */
+  h1 {
+    font-size: var(--header-1);
+  }
+  h2 {
+    font-size: var(--header-2);
+  }
+  h3 {
+    font-size: var(--header-3);
+  }
+  /* subsections */
+  .one {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin-left: 1em;
+  }
+  .two {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin-left: 3em;
+  }
+  .mid {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    text-align: center;
+  }
   
-  /* body/content */
+  /* ---BODY / CONTENT--- */
   body {
     font-family: 'Courier New', Courier, monospace;
     padding: 1rem;
@@ -42,19 +67,7 @@
     /* height: auto; */
     background: #9acd32;
   }
-
-  /* headers */
-  h1 {
-    font-size: var(--header-1);
-  }
-  h2 {
-    font-size: var(--header-2);
-  }
-  h3 {
-    font-size: var(--header-3);
-  }
   
-  /* paragraphs */
   p {
     font-size: var(--text);
     line-height: var(--text-line-height);
@@ -71,7 +84,7 @@
     text-decoration: underline;
   }
   
-  /* tables */
+  /* ---TABLES--- */
   /* main tables */
   table {
     margin-top: 0.5rem;
@@ -100,8 +113,6 @@
     margin-right: auto;
     text-align: center;
     max-width: var(--content-width);
-    overflow:scroll;
-
 
   }
   .rating-head {
@@ -139,28 +150,10 @@
     overflow: hidden;
   }
 
-  /* subsections */
-  .one {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    margin-left: 1em;
-  }
-  .two {
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-    margin-left: 3em;
-  }
-  .mid {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    text-align: center;
-  }
-
 /* lists */
   li {
-    /* font-size: 14px; */
-    /* margin-left: 10px; */
     list-style-type:circle;
+
  }
 
-/* test */
+/* ---TEST--- */
