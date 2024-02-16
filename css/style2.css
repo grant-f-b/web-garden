@@ -52,4 +52,20 @@
     padding-bottom: 10px;
   }
 
+  .rules {
+    border: 1px solid black;
+    width: 100%;
+    overflow: hidden;
+    /* white-space: nowrap; */
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
   
+  ul {
+    list-style: none; /* Remove HTML bullets */
+  }
+  li::before {
+    content: "🢩"; /* Insert content that looks like bullets */
+    padding-right: 8px;
+    color: #9acd32; /* Or a color you prefer */
+  }
