@@ -82,6 +82,7 @@
   }
   a:hover {
     text-decoration: underline;
+    font-weight: bold;
   }
   
   /* ---TABLES--- */
@@ -108,9 +109,9 @@
 
 
 /* lists */
-  li {
-    /* list-style-type:circle; */
+  /* li {
+    list-style-type:circle;
 
- }
+ } */
 
 /* ---TEST--- */

@@ -54,9 +54,8 @@
 
   .rules {
     border: 1px solid black;
-    width: 100%;
+    width:fit-content;
     overflow: hidden;
-    /* white-space: nowrap; */
     padding-top: 10px;
     padding-bottom: 10px;
   }
