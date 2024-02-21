@@ -108,10 +108,10 @@
 
 
 
-/* lists */
-  /* li {
-    list-style-type:circle;
+/* LISTS */
 
- } */
 
 /* ---TEST--- */
+.gfbfooter:hover {
+  color: #fffdd0;
+}
