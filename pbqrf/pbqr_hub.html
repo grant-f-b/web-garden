@@ -97,26 +97,36 @@
 	The Points by Quarter Rating is a points-based rating system that rewards teams for winning each quarter of the game, as viewed in the box score, as well as points for winning the game as a whole. Teams are rewarded one point for each quarter in which they score more points than their opponent, and three points for winning the game. Each game is then worth a total of up to seven points. No team is awarded points for quarters that end in ties, and no points are awarded for any overtime periods. 
 
 	The idea is that a team need only win one quarter to win the full game, so by awarding three points for the win, the winner of the game must win at least four of the seven possible points. This guarantees a majority of the points going to the game winner, but still allowing the loser to win up to three of the seven points if they happen to out-perform their opponent for 75% of the game. 
+</md-block>
+  <pre>
 
-	Box Score:
-
------       1   2   3   4      T
-
-BGSU      7  0  14  10    31
-
-Toledo    0  7  14   7     28
+-------------------------------------
+<span style="font-weight: bold;">Box Score</span>: |  <span style="font-weight: bold;">1</span> |  <span style="font-weight: bold;">2</span> |  <span style="font-weight: bold;">3</span> |  <span style="font-weight: bold;">4</span> |  <span style="font-weight: bold;">T</span>  |
+-------------------------------------
+BGSU       |  7 |  0 | 14 | 10 |  31 |
+-------------------------------------
+Toledo     |  0 |  7 | 14 |  7 |  28 |
+-------------------------------------
+</pre>
+<md-block style="margin-left:3rem;text-indent: 3rem;padding-right: 3rem;font-size: 12pt;">
 
 	In this example, each team would be rewarded for the quarter they won in the first half. No points are awarded for the third quarter, and BGSU gets the point for the final quarter and the three points for the win along with it. 
 
 	The ratings table shows how many quarters each team won, their record, and the PBQR score compiled from these stats. The last column includes how many quarters each team has won per game. Since some teams play a few more games than others, I included this to show how many quarters each team wins on an single-game-basis. Though the table is not sortable yet (hopefully), I thought this was a relevant stat to include as it gives you an idea of how each team comprised their total rating, whether its from mostly winning games or just single quarters. For instance, you can see Washington's QpG is the only team in the top 12 lower than two. 
 
-Future additions:
+  <u style="font-weight: bold;">Future additions</u>:
 
-- Ties: I would like to somehow account for tied quarters somehow. The only idea I have so far is off-setting wins with losses by also taking away a point for lost quarters. This way, teams are not penalized for tying like they are for losing a quarter, sort of indirectly accounting for ties by accounting for non-wins overall. 
-- Margins: Sort of continued on from the last point, it would be fun to eventually account for points scored in a quarter. For example, losing a quarter by 1 point now is treated the same as losing that quarter by 28 points. This could possibly be included by increasing the total amount of points awarded overall for quarters and wins, and weighing the points awarded for each quarter weighted by score deficit. 
-- SOS: I would also like to account for strength of schedule somehow. Continuing further on from last bullet point, if Toledo beats Ohio State for one quarter that is worth only one point, the same as winning a quarter against a MAC opponent. On the flip side, Ohio State should be punished for losing to or even tying a MAC team for a quarter. 
-- Garbage time: Continuing even further on from last point, if a game is already a blowout, it might be nice to weight the fourth quarter less heavily and count it as garbage time. Ohio State should not be penalized for losing to a MAC team in the fourth quarter if they have third stringers in and are already up 60-0. 
-- Overtime: I plan on experimenting with possibly counting overtime as an extra quarter
+<ul>
+<li><span style="font-weight: bold;">Ties</span>: I would like to somehow account for tied quarters somehow. The only idea I have so far is off-setting wins with losses by also taking away a point for lost quarters. This way, teams are not penalized for tying like they are for losing a quarter, sort of indirectly accounting for ties by accounting for non-wins overall. </li>
+<br>
+<li><span style="font-weight: bold;">Margins</span>: Sort of continued on from the last point, it would be fun to eventually account for points scored in a quarter. For example, losing a quarter by 1 point now is treated the same as losing that quarter by 28 points. This could possibly be included by increasing the total amount of points awarded overall for quarters and wins, and weighing the points awarded for each quarter weighted by score deficit. </li>
+<br>
+<li><span style="font-weight: bold;">SOS</span>: I would also like to account for strength of schedule somehow. Continuing further on from last bullet point, if Toledo beats Ohio State for one quarter that is worth only one point, the same as winning a quarter against a MAC opponent. On the flip side, Ohio State should be punished for losing to or even tying a MAC team for a quarter. </li>
+<br>
+<li><span style="font-weight: bold;">Garbage time</span>: Continuing even further on from last point, if a game is already a blowout, it might be nice to weight the fourth quarter less heavily and count it as garbage time. Ohio State should not be penalized for losing to a MAC team in the fourth quarter if they have third stringers in and are already up 60-0. </li>
+<br>
+<li><span style="font-weight: bold;">Overtime</span>: I plan on experimenting with possibly counting overtime as an extra quarter</li>
+</ul>
 
 </md-block>
 </div>
