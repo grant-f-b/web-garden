@@ -84,20 +84,20 @@
 
     <img style=" padding-top: 0rem; display: block;margin-left: auto; margin-right: auto;"  src="../web-garden/site_imgs/button(2).png" alt="my_button" height="31" width="88">
 
+<!-- SCRIPTS -->
+<script>
+  window.onscroll = function() {myFunction()};
+  
+  var header = document.getElementById("h2");
+  var sticky = header.offsetTop;
+  
+  function myFunction() {
+    if (window.pageYOffset > sticky) {
+      header.classList.add("sticky");
+    } else {
+      header.classList.remove("sticky");
+    }
+  }
+  </script>
 
-    <script>
-        window.onscroll = function() {myFunction()};
-        
-        var header = document.getElementById("h2");
-        var sticky = header.offsetTop;
-        
-        function myFunction() {
-          if (window.pageYOffset > sticky) {
-            header.classList.add("sticky");
-          } else {
-            header.classList.remove("sticky");
-          }
-        }
-        </script>
-
-</body>
+  </body>

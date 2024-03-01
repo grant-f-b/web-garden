@@ -30,6 +30,7 @@
 
 <body>
     <!-- header -->
+    <div class="h1" id="h2">
     <header>    
       <br>
         <h3>⎔ &#127944; ⎔</h3> 
@@ -37,7 +38,7 @@
         <a style="color: black; font-weight:bold" href="../index.html">~𝖌𝖋𝖇~</a>
         <a style="color: black; font-weight:bold" href="../posts.html">writing</a>
         <br><br>
-    </header>
+    </header></div>
 
     <!-- content -->
     <h1 style="font-style:italic;text-align: center;"><u>PBQRating Hub</u></h1>
@@ -163,3 +164,21 @@
         <h3>𝕲𝕱𝕭</h3>
         <br>
     </footer>
+
+    <!-- SCRIPTS -->
+    <script>
+      window.onscroll = function() {myFunction()};
+      
+      var header = document.getElementById("h2");
+      var sticky = header.offsetTop;
+      
+      function myFunction() {
+        if (window.pageYOffset > sticky) {
+          header.classList.add("sticky");
+        } else {
+          header.classList.remove("sticky");
+        }
+      }
+      </script>
+
+      </body>
