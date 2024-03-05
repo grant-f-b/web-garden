@@ -60,12 +60,20 @@
     padding-top: 10px;
     padding-bottom: 10px;
   }
-  
-  ul {
-    list-style: none; /* Remove HTML bullets */
+
+  /* ul {
+    list-style-type:circle;
+    
+  } */
+
+
+  /* LIST BULLETS */
+  /* Remove HTML bullets */
+   ul {
+    list-style: none; 
   }
   li::before {
-    content: "🢩"; /* Insert content that looks like bullets */
+    content: "•"; 
     padding-right: 8px;
-    color: #9acd32; /* Or a color you prefer */
-  }
+    color: #9acd32; 
+  } 
