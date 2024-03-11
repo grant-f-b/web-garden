@@ -126,3 +126,8 @@
 
 /* ---TEST--- */
 
+div.left {
+  float: left; 
+  clear: both;
+  }
+  
