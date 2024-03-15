@@ -126,8 +126,12 @@
 
 /* ---TEST--- */
 
-div.left {
-  float: left; 
-  clear: both;
-  }
+div.ex {
+  background-color: yellow;
+  padding: 20px;
+  display: none;
+}
   
+span.tx:hover + div {
+  display: block;
+}
