@@ -101,5 +101,14 @@
     }
   }
   </script>
+<script>
+  const colors = ["#9acd32", "#FE8000",];
+
+window.addEventListener("mousedown", (e) => {
+  const color = colors.shift();
+  document.documentElement.style.setProperty("--highlight-color", color);
+  colors.push(color);
+});
+</script>
 
   </body>

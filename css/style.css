@@ -135,3 +135,11 @@ div.ex {
 span.tx:hover + div {
   display: block;
 }
+
+:root {
+  --highlight-color: null;
+}
+
+::selection {
+  background: var(--highlight-color);
+}
