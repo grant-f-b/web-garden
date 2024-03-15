@@ -49,6 +49,7 @@ https://www.makeuseof.com/md-block-render-markdown-web-page/ -- md-block tutoria
 	
 https://tfoote.github.io/design/courses/how-to-contribute/topics/embedding-google-docs/ -- embed google sheets; helped me embed a block of google sheets onto a page to create my first cfb rating web page; have since decided to stick to simple html, markdown, and plaintext tables instead but may use this again in the future
 https://webtips.dev/expandable-tables-in-html -- expandable tables tutorial 
+https://www.braydoncoyer.dev/blog/change-text-highlight-color-with-css# -- tutorial for changing the color of highlighted text 
 
 https://www.w3schools.com/howto/howto_js_sticky_header.asp -- sticky header documentation
 +-----------------------+
