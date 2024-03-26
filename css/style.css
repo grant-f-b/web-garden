@@ -124,8 +124,8 @@
 /* LISTS */
 
 
-/* ---TEST--- */
 
+/* HOVER SECTION */
 div.ex {
   background-color: yellow;
   padding: 20px;
@@ -143,3 +143,5 @@ span.tx:hover + div {
 ::selection {
   background: var(--highlight-color);
 }
+
+/* ---TEST--- */
