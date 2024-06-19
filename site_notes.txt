@@ -53,6 +53,8 @@ https://webtips.dev/expandable-tables-in-html -- expandable tables tutorial
 https://www.braydoncoyer.dev/blog/change-text-highlight-color-with-css# -- tutorial for changing the color of highlighted text 
 
 https://www.w3schools.com/howto/howto_js_sticky_header.asp -- sticky header documentation
+
+https://stackoverflow.com/questions/47428504/javascript-count-number-of-visitor-for-website -- page view counter stack page (really sloppy implementation and probably won't stick around long in current form)
 +-----------------------+
 
 
