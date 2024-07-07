@@ -12,6 +12,7 @@ https://rachsmith.com -- I love the way this blog lists their posts by month and
 
 https://nalinplad.github.io/small_web_things/ -- html widget templates; don't have a use for any of them yet but these are good examples of little things I'd like to tinker with on these pages in the future 
 
+https://vcfmw.org/index.html -- really cool retro site for a computer convention that I would love to learn to emulate the style of 
 +-----------------------+
 
 ==> HTML TOOLS:	
