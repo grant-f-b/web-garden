@@ -1,12 +1,12 @@
 ~✎~✎~ SITE NOTES ~✎~✎~ 
 
 ==> INSPIRATION:
-=> speciific sites that have inspired me to create this site
+=> specific sites that have inspired me to create this site
 
 https://moth.monster/blog/html-tutorial/ -- html tutorial for making a simple html site; this site definitely would not exist if not for this blog post 
 
 https://blog.cassidoo.co/ -- tech blog that is gorgeous on desktop and mobile; I especially love the changing color scheme and tag system for posts
-https://sunny.gg/ -- another tech blog that dubs itself as a simpleton website and has plain text posts like this page(or had one at one point anyways but that post seems to have been take down); the format and style of the tables on my pages are based on the tables here 
+https://sunny.gg/ -- another tech blog that dubs itself as a simpleton website and has plain text posts like this page(or had one at one point anyways but that post seems to have been take down); the format and style of the tables on my pages are based on the tables that were here at one point 
 https://t0.vc -- an extremely simple html blog with a neat guest book
 https://rachsmith.com -- I love the way this blog lists their posts by month and how the dates are colorful
 
