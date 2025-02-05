@@ -1,0 +1,483 @@
+        ~✎~✎~ PBQR FINDINGS ~✎~✎~
+
+    +---------------------------------------+
+
+        ———> 2023. <———
+
+
+I started a college football rating system and started housing it on my own Github-hosted site over @ https://www.gfbald.win/pbqrf/pbqr_hub.html. Here is the explanation of my ratings straight from that page:
+
+"The Points by Quarter Rating is a points-based rating system that rewards teams for winning each quarter of the game, as viewed in the box score, as well as points for winning the game as a whole. Teams are rewarded one point for each quarter in which they score more points than their opponent, and three points for winning the game. Each game is then worth a total of up to seven points. No team is awarded points for quarters that end in ties, and no points are awarded for any overtime periods.
+
+The idea is that a team needs to win only one quarter to win the full game, so by awarding three points for the win, the winner of the game must win at least four of the seven possible points. This guarantees a majority of the points going to the game winner, but still allows the loser to win up to three of the seven points if they happen to out-perform their opponent for 75% of the game."
+
+Now that I have been doing this for 3 seasons and I backtracked and filled in the data for the rest of the CFP era of college football, going back to 2014, I want to lay out my findings in detail and attempt to answer a few questions I have about the rating system. Namely, is the PBQR a trustworthy ranking to determine who should be included in a post-season playoff? Is it an accurate representation of the talent dispersion in real life, and if not, what is holding it back? What causes major outliers? Could someone realistically use this to predict head-to-head matchups? Has this all been a giant waste of time?
+
+I have tweaked the rating system several times throughout the last three years, trying to weigh the ratings on team's overall projected talent using recruiting rankings, but ultimately I could not find a formula that worked year after year. Talent composites have also become increasingly difficult to find ever since the portal opened up. The main formula for the rating always stayed the same, so I decided to roll with this stripped down version that is just the original formula that rewards points for winning quarters. That's it, no grading based on a curve or weeding out lesser competition with SOS or talent composite. When it comes down to it, we will just look at Power 5 (RIP) and Group of 5 separately.
+
+One big note: all of the data we will be looking at includes post season games, so some teams have played up to 3 more games than other teams. In order to make it a bit easier to discern how teams actually stand relative to one another, I included a QPG column, or "Quarters per Game." This tells on average how many quarters a team usually wins each game, which is essentially the one stat this entire rating system is built on, and I think it should be able to help you figure out where teams may have stood before the playoff, bowls, and championship games were played out.
+
++----+------+---------------+-------+----+---+-------+
+|                    PBQR 2023                       |
++----+------+---------------+-------+----+---+-------+
+|    | PBQR |   -           | 1/4's | W  | L |  QPG  |
++----+------+---------------+-------+----+---+-------+
+| 1  | 88   | Michigan      | 43    | 15 | 0 | 2.867 |
++----+------+---------------+-------+----+---+-------+
+| 2  | 78   | Georgia       | 39    | 13 | 1 | 2.786 |
++----+------+---------------+-------+----+---+-------+
+| 3  | 75   | Oregon        | 39    | 12 | 2 | 2.786 |
++----+------+---------------+-------+----+---+-------+
+| 4  | 72   | Liberty       | 33    | 13 | 1 | 2.357 |
++----+------+---------------+-------+----+---+-------+
+| 5  | 71   | Florida State | 32    | 13 | 1 | 2.286 |
++----+------+---------------+-------+----+---+-------+
+| 6  | 71   | Texas         | 35    | 12 | 2 | 2.500 |
++----+------+---------------+-------+----+---+-------+
+| 7  | 69   | Alabama       | 33    | 12 | 2 | 2.357 |
++----+------+---------------+-------+----+---+-------+
+| 8  | 69   | Washington    | 27    | 14 | 1 | 1.800 |
++----+------+---------------+-------+----+---+-------+
+| 9  | 67   | Ohio State    | 34    | 11 | 2 | 2.615 |
++----+------+---------------+-------+----+---+-------+
+| 10 | 66   | Notre Dame    | 36    | 10 | 3 | 2.769 |
++----+------+---------------+-------+----+---+-------+
+| 11 | 66   | Penn State    | 36    | 10 | 3 | 2.769 |
++----+------+---------------+-------+----+---+-------+
+| 12 | 66   | Toledo        | 33    | 11 | 3 | 2.357 |
++----+------+---------------+-------+----+---+-------+
+
+Taking a look at last season, the top 12 FBS teams in the PBQR are fairly consistent with other metrics across the web. The first thing that stands out is how low Washington is, and how high Oregon is despite Oregon's two losses coming to the Huskies. The Entropy rankings and FPI also have Oregon above Washington though, and the Entropy and Congrove ratings also both have Florida State above at least one playoff team. 2023 was also a big outlier, so there aren't usually such big outliers in the rankings like this past season. It is the only season where the top 4 Power 5 teams didn't include at least 2 of the selected playoff teams, mostly due to Florida State getting snubbed. Most seasons, the ranking does a decent job at choosing the playoff teams, 2021 and 2022's top 4 teams were the exact four teams in the CFP. The top 2 teams in the PBQR also made the playoff in every other season 2014-2022, other than 2020 which had BYU at number 2, but that season also had many outliers due to covid.
+
+The 2024 Washington Huskies were, in fact, one of the most anomalous teams of the entire decade in respect to these rankings. If you look at the QPG column not for just this season but the top 12 teams of any given season of the last 10 years, you will notice every other team falling in the 2.3-2.8 range, generally with higher numbers at the very top, though not always. Washington is sitting at 8 with a 1.800. That means that they were the only team in the top 12 to not win a majority of the quarters they played this year. Of course, this doesn't mean that they lost a majority of quarters they played this year. Surely, they just tied the other team in more quarters than most other top teams did, or they won the quarters that they did win by a larger margin than other teams. Washington and Michigan both played 60 quarters of football last season, and Michigan won 43 of those quarters straight up while Washington only won 27. That's 47th best in the FBS this year 28 quarters could've been all they needed to win the championship. I will address the implications of a team like Washington later on and how I might go about fixing these issues. 
+
+        ———> PLAYOFF SCENARIOS <———
+
++----+-------------+------------+---------------+
+|                4-team playoff                 |
++----+-------------+------------+---------------+
+|    |    2021     |    2022    |    2023       |
++----+-------------+------------+---------------+
+| 1  | Georgia     | Georgia    | Michigan      |
++----+-------------+------------+---------------+
+| 2  | Alabama     | Michigan   | Georgia       |
++----+-------------+------------+---------------+
+| 3  | Michigan    | Ohio State | Oregon        |
++----+-------------+------------+---------------+
+| 4  | Cincinnati  | TCU        | Liberty       |
++----+-------------+------------+---------------+
+|    |             |            | Florida State |
++----+-------------+------------+---------------+
+
+Here are the last 3 seasons that show that taking the top 4 teams would have looked like if it were based on the overall PBQR ratings, and as you can see the two years before last were spot on. This season would most likely see Liberty being replaced by FSU, and I don't see that being very controversial even with Cincy getting the bid in 2021. Admittedly, most years would require filtering out the best G5 teams, so the circumstances that allowed Cincy to get in are more of an outlier than not taking a team like Liberty. Recently teams like Appalachian State, Coastal Carolina and of course the undefeated 2016 Western Michigan and 2017 UCF teams also made the overall top 4.
+
++----+-------------+------------+---------------+
+|                12-team playoff                |
++----+-------------+------------+---------------+
+|    |    2021     |    2022    |    2023       |
++----+-------------+------------+---------------+
+| 1  | Georgia     | Georgia    | Michigan      |
++----+-------------+------------+---------------+
+| 2  | Michigan    | Michigan   | Georgia       |
++----+-------------+------------+---------------+
+| 3  | Oklahoma St | TCU        | Oregon        |
++----+-------------+------------+---------------+
+| 4  | Pitt        | USC        | Florida State |
++----+-------------+------------+---------------+
+|    |             |            |               |
++----+-------------+------------+---------------+
+| 5  | Alabama     | Ohio State | Texas         |
++----+-------------+------------+---------------+
+| 6  | Ohio State  | Penn State | Alabama       |
++----+-------------+------------+---------------+
+| 7  | Baylor      | Tennessee  | Washington    |
++----+-------------+------------+---------------+
+| 8  | Notre Dame  | Alabama    | Ohio State    |
++----+-------------+------------+---------------+
+| 9  | Oklahoma    | Washington | Notre Dame    |
++----+-------------+------------+---------------+
+| 10 | Clemson     | Clemson    | Penn State    |
++----+-------------+------------+---------------+
+| 11 | Oregon      | K State    | Oklahoma      |
++----+-------------+------------+---------------+
+|    |             |            |               |
++----+-------------+------------+---------------+
+| 12 | Cincinnati  | Tulane     | Liberty       |
++----+-------------+------------+---------------+
+
+To simulate what the upcoming 12-team playoff would look like the last three seasons, I took the Power 5 champs and then the next 6 best P5 teams along with the highest ranked G5 team. Interestingly, Cincinnati still drew Alabama in 2021. Somehow I don't see them fairing much better in Bryant-Denny. We would have also gotten matchups like Oklahoma @ Alabama & Notre Dame, Clemson @ Tennessee, and Ohio State hosting both Oregon & Notre Dame which would both be regular season rematches. Georgia, Alabama, Ohio State and Michigan are the only 4 that would have made all three of the last playoffs, unsurprisingly.
+
+    +---------------------------------------+
+
+        ———> ALL-TIME (2014-2023) <———
+
++-----------------------------------------+
+|                 power 5                 |
++----+--------+-------------------+-------+
+|    |  PBQR  |    -              |  QPG  |
++----+--------+-------------------+-------+
+| 1  | 76.700 | Alabama           | 2.745 |
++----+--------+-------------------+-------+
+| 2  | 70.400 | Clemson           | 2.479 |
++----+--------+-------------------+-------+
+| 3  | 69.100 | Ohio State        | 2.649 |
++----+--------+-------------------+-------+
+| 4  | 67.100 | Georgia           | 2.393 |
++----+--------+-------------------+-------+
+| 5  | 61.000 | Oklahoma          | 2.325 |
++----+--------+-------------------+-------+
+| 6  | 58.900 | Michigan          | 2.352 |
++----+--------+-------------------+-------+
+| 7  | 57.300 | Notre Dame        | 2.244 |
++----+--------+-------------------+-------+
+| 8  | 56.100 | Penn State        | 2.333 |
++----+--------+-------------------+-------+
+| 9  | 55.200 | Oregon            | 2.166 |
++----+--------+-------------------+-------+
+| 10 | 54.500 | LSU               | 2.127 |
++----+--------+-------------------+-------+
+| 11 | 53.600 | Wisconsin         | 2.045 |
++----+--------+-------------------+-------+
+| 12 | 53.500 | Oklahoma State    | 2.059 |
++----+--------+-------------------+-------+
+| 13 | 52.500 | Utah              | 2.095 |
++----+--------+-------------------+-------+
+| 14 | 52.300 | Washington        | 2.105 |
++----+--------+-------------------+-------+
+| 15 | 51.700 | Iowa              | 1.995 |
++----+--------+-------------------+-------+
+| 16 | 49.600 | Kansas State      | 2.088 |
++----+--------+-------------------+-------+
+| 17 | 49.200 | TCU               | 1.946 |
++----+--------+-------------------+-------+
+| 18 | 48.500 | Florida State     | 1.866 |
++----+--------+-------------------+-------+
+| 19 | 48.100 | NC State          | 1.943 |
++----+--------+-------------------+-------+
+| 20 | 47.900 | Texas A&M         | 1.987 |
++----+--------+-------------------+-------+
+| 21 | 47.800 | USC               | 1.951 |
++----+--------+-------------------+-------+
+| 22 | 47.300 | Miami             | 2.017 |
++----+--------+-------------------+-------+
+| 23 | 46.800 | Texas             | 1.973 |
++----+--------+-------------------+-------+
+| 24 | 46.700 | Florida           | 1.885 |
++----+--------+-------------------+-------+
+| 25 | 46.600 | Mississippi State | 1.928 |
++----+--------+-------------------+-------+
+
+The top 25 highest averaged teams of the last 10 seasons (all 10 seasons of the 4-team playoff era) are shown above. After Bama there is a 6 point drop off, then after Georgia there is another 6 point drop. After that it kind of moves down the line steadily without making any big jumps. Overall, I think this unsurprisingly paints a pretty accurate picture of what the field has looked like over the last decade. Ohio State, Georgia and Clemson have completely dominated, but not on Bama's level. Oklahoma is the best team that hasn't won a playoff. This upcoming season (24-25) will see 8 of these teams competing in the Big Ten and 8 competing in the SEC. The ACC and Big 12 each have 4 teams that made the cut and then all that is left is Notre Dame, of course.
+
+Taking 2020 out of the equation barely changes anything. Michigan takes the biggest hit, as they would pass Oklahoma without that year. Alabama is one of the very few teams whose average actually goes down if you take away the covid year, so out of respect for Mr. Saban and disrespect to Michigan I am keeping it in at all costs. Despite only playing 13 games, the 2020 Saban team won 41 quarters that year, which would be more than 6 of the 9 other playoff champions, who all played 2 more games. Ohio State, Wisconsin, and Utah all took the biggest hits other than Michigan, though they all had winning records, Ohio State of course going all the way to the national title game, and none of them shit the bed the way UM did in 2020, but they all performed so consistently well most other years that the shorter schedules affected them more than most.
+
+
++------------------------------------------+
+|              group of 5                  |
++----+--------+--------------------+-------+
+|    |  PBQR  |                    |  QPG  |
++----+--------+--------------------+-------+
+| 1  | 59.200 | Appalachian State  | 2.357 |
++----+--------+--------------------+-------+
+| 2  | 57.000 | James Madison      | 2.459 |
++----+--------+--------------------+-------+
+| 3  | 56.600 | Boise State        | 2.216 |
++----+--------+--------------------+-------+
+| 4  | 54.200 | Memphis            | 2.144 |
++----+--------+--------------------+-------+
+| 5  | 51.000 | Jacksonville State | 1.846 |
++----+--------+--------------------+-------+
+| 6  | 50.400 | Toledo             | 2.045 |
++----+--------+--------------------+-------+
+| 7  | 50.300 | UCF                | 2.056 |
++----+--------+--------------------+-------+
+| 8  | 50.300 | San Diego State    | 1.981 |
++----+--------+--------------------+-------+
+| 9  | 49.200 | Western Kentucky   | 1.893 |
++----+--------+--------------------+-------+
+| 10 | 48.900 | Marshall           | 1.958 |
++----+--------+--------------------+-------+
+| 11 | 48.800 | Air Force          | 2.012 |
++----+--------+--------------------+-------+
+| 12 | 48.500 | Cincinnati         | 1.946 |
++----+--------+--------------------+-------+
+
+Taking a look now at the Group of 5, Appalachian State was easily the most dominant of the lot over the last 10 years. This is particularly impressive considering 2014 and the first year of this analysis was their first year in the FBS. Surprisingly, they never finished as the top G5 team more than once, though. In fact, no G5 team finished at the top more than once in the entire decade. If the 12-team playoff went back that far and was decided by my rankings, there would have been 10 different G5 schools in the playoff over the course of the decade. Not even UCF or Cincinnati could win the G5 crown twice. Coastal Carolina, Fresno State, and Houston all did not even make this list above which is surprising to me. James Madison is a bit of an outlier which surely pushed one of them just out of sight here, as they only have a couple seasons under their belt but performed really well this past season. Across the board, the G5 teams all win less quarters than the P5 teams do. I guess that makes sense with all of them usually playing an onslaught of three or four P5 teams to start off the year but I did predict the top dogs like App State to dominate their fellow conference opponents so consistently that maybe they would still average as much as the top teams overall. Sustained success is also hard to come by in the G5 where teams like UCF and Western Michigan quickly have their coaches poached by larger programs, so the longer the time frame I look at, the harder it is for a G5 team to continue putting numbers like that on the board. Lastly I just want to say that I love how Boise is still at the top. They never won the G5 crown the last 10 years so it is a bit easy to overlook them, but they have still consistently stayed winning throughout the playoff era of college football.
+
++-----------------------------+
+|           AVERAGES          |
++------------+--------+-------+
+| nation avg | 41.199 | 1.726 |
++------------+--------+-------+
+| P5 avg     | 44.465 | 1.842 |
++------------+--------+-------+
+| G5 avg     | 38.158 | 1.552 |
++------------+--------+-------+
+
+These are the overall averages for all teams across the last 10 years. Searching for teams that match these exact numbers, it seems that the likes of UCLA, Wake Forest and Louisville are the most "average" teams of them all. The grand prize goes to Arkansas State, though, who at 62 wins and 63 losses over the last 10 years has an average rating of 41.000 and has won 1.790 quarters per game in that timespan. Congratulations, all the Arkansas State Red Wolves fans who are reading this.
+
++--------+----------+-------+
+|  PBQR  |          |  QPG  |
++--------+----------+-------+
+| 47.264 | SEC      | 1.905 |
++--------+----------+-------+
+| 44.870 | Big 12   | 1.865 |
++--------+----------+-------+
+| 43.786 | ACC      | 1.799 |
++--------+----------+-------+
+| 43.436 | B1G      | 1.813 |
++--------+----------+-------+
+| 41.783 | Pac-12   | 1.802 |
++--------+----------+-------+
+| 39.588 | Sun Belt | 1.462 |
++--------+----------+-------+
+| 38.967 | MWest    | 1.656 |
++--------+----------+-------+
+| 35.992 | MAC      | 1.591 |
++--------+----------+-------+
+| 35.978 | C-USA    | 1.196 |
++--------+----------+-------+
+| 27.742 | AAC      | 1.133 |
++--------+----------+-------+
+
+Now for the top conferences; nobody is surprised to see the SEC at the top, but I think many would be surprised to see the Big Ten all the way down at fourth. A bit of deeper analysis shows the weight of the successful teams in the Big Ten is distributed much differently than other conferences which has led to the average they have. The Big Ten has 4 of the bottom 6 schools in the P5 conferences, the only thing saving them being that the other 2 (Vandy and Kansas) are the very bottom 2 by a significant margin. They also had 3 teams average above 60 PBQR which is as many as the ACC, Big 12 and PAC combined.
+
+I am also not surprised to see the Sun Belt leading the G5 pack after they've had so many up and coming teams the last few years, but I was also wrong with the MAC as I expected them to be closer to the bottom. I know the AAC was recently ravaged and I believe C-USA has had some shaking up as well but I still thought the MAC was the weakest conference. I suppose Toledo, NIU and Western have all had very decent teams in the last decade, as well as BGSU and Miami even.
+
+    +---------------------------------------+
+
+        ———> BEST TEAMS <———
+
++------+------+------------+------+-------+----+----+-------+
+|      | year | -          | PBQR | 1/4's | W  | L  | QPG   |
++------+------+------------+------+-------+----+----+-------+
+| 1    | 2018 | Clemson    | 91   | 46    | 15 | 0  | 3.067 |
++------+------+------------+------+-------+----+----+-------+
+| 2    | 2022 | Georgia    | 91   | 46    | 15 | 0  | 3.067 |
++------+------+------------+------+-------+----+----+-------+
+| 3    | 2019 | Clemson    | 89   | 47    | 14 | 1  | 3.133 |
++------+------+------------+------+-------+----+----+-------+
+| 4    | 2023 | Michigan   | 88   | 43    | 15 | 0  | 2.867 |
++------+------+------------+------+-------+----+----+-------+
+| 5    | 2019 | LSU        | 85   | 40    | 15 | 0  | 2.667 |
++------+------+------------+------+-------+----+----+-------+
+| 6    | 2018 | Alabama    | 84   | 42    | 14 | 1  | 2.800 |
++------+------+------------+------+-------+----+----+-------+
+| 7    | 2014 | Ohio State | 83   | 41    | 14 | 1  | 2.733 |
++------+------+------------+------+-------+----+----+-------+
+| 8    | 2016 | Alabama    | 83   | 41    | 14 | 1  | 2.733 |
++------+------+------------+------+-------+----+----+-------+
+| 9    | 2019 | Ohio State | 82   | 43    | 13 | 1  | 3.071 |
++------+------+------------+------+-------+----+----+-------+
+| 10   | 2014 | Oregon     | 81   | 42    | 13 | 2  | 2.800 |
++------+------+------------+------+-------+----+----+-------+
+| 11   | 2015 | Clemson    | 81   | 39    | 14 | 1  | 2.600 |
++------+------+------------+------+-------+----+----+-------+
+| 12   | 2021 | Georgia    | 81   | 39    | 14 | 1  | 2.600 |
++------+------+------------+------+-------+----+----+-------+
+|      |      |            |      |       |    |    |       |
++------+------+------------+------+-------+----+----+-------+
+| 1290 | 2015 | Kansas     | 5    | 5     | 0  | 12 | 0.417 |
++------+------+------------+------+-------+----+----+-------+
+| 1291 | 2019 | Akron      | 4    | 4     | 0  | 12 | 0.333 |
++------+------+------------+------+-------+----+----+-------+
+| 1292 | 2017 | UTEP       | 4    | 4     | 0  | 12 | 0.333 |
++------+------+------------+------+-------+----+----+-------+
+
+Now we are looking at the top individual seasons teams had over the last decade. The main thing that sticks out from the front is the 2019 Clemson team being the highest rated team who did not win a title, outperforming that legendary LSU by a significant margin. 2019 Ohio State standing at ninth seemingly means that that was the toughest playoff by far, with 2018 being the only other year to even have 2 teams in the top 12. At 3.133 quarters per game, 2019 Clemson also won more quarters than anybody in the last 10 years. Only 2020 Alabama averaged more per game, as mentioned before, but only won 41 quarters due to the shorter season. 47 out of 60 quarters, but they would've needed about 50 to win the title that year against Joe Burrow and the Tigers. A much completely different path than the 2023 Huskies, yet the same result at the end.
+
+I am never going to do a whole analysis like this and spend too much time on the least successful teams, unless they performed very poorly for an intriguing reason, or it is someone who deserves it after something like stealing another team's signs in a major cheating scandal. I generally do not want to do this just to pile on, so I am only including the bottom 3 teams ever just to show how poorly the worst teams and the single worst Power 5 team ever performed on this metric. Only 4 or 5 quarters out of 48 is brutal. I also wanted to include it just to show that we are looking at over 1200 teams in total here.
+
+
++-------------------+----+
+|   Teams w/ +70 PBQR    |
++-------------------+----+
+| Alabama           | 8  |
++-------------------+----+
+| Clemson           | 5  |
++-------------------+----+
+| Georgia           | 5  |
++-------------------+----+
+| Ohio State        | 5  |
++-------------------+----+
+| Michigan          | 3  |
++-------------------+----+
+| Oregon            | 3  |
++-------------------+----+
+| TCU               | 2  |
++-------------------+----+
+| LSU               | 1  |
++-------------------+----+
+| Texas             | 1  |
++-------------------+----+
+| Florida State     | 1  |
++-------------------+----+
+| Oklahoma          | 1  |
++-------------------+----+
+| Florida State     | 1  |
++-------------------+----+
+| Baylor            | 1  |
++-------------------+----+
++-------------------+----+
+| Houston           | 2  |
++-------------------+----+
+| San Diego State   | 2  |
++-------------------+----+
+| UCF               | 2  |
++-------------------+----+
+| Marshall          | 1  |
++-------------------+----+
+| Appalachian State | 1  |
++-------------------+----+
+| Western Michigan  | 1  |
++-------------------+----+
+| Fresno State      | 1  |
++-------------------+----+
+| Florida Atlantic  | 1  |
++-------------------+----+
+| Memphis           | 1  |
++-------------------+----+
+| Liberty           | 1  |
++-------------------+----+
+
+The table above shows the amount of times each team has finished above 70 PBQR. The table itself is not all that surprising, especially on top. Bama reached the goal 8/10 times, and were the only team to do it during the covid year. Clemson, Ohio State and Georgia hit an even 50%; Michigan, Oregon, and TCU all made multiple appearances. The most surprising parts to me were LSU and Oklahoma with only one a piece, and then the teams who never made it past 70 at all: Penn State, A&M, USC, and Notre Dame, especially the latter two, who made the playoffs at least once.
+
+The most interesting thing with the Group 5 is definitely Houston, who was one of only 3 teams to peak over 70 twice, yet they did not make the top 12 overall G5 teams. They had a lot of coaching turnover during these years but I assumed they'd have a higher average with teams like that on their resume.
+
+
++-------------------+----+
+|         BY YEAR        |
++-------------------+----+
+| 2014              | 6  |
++-------------------+----+
+| 2015              | 6  |
++-------------------+----+
+| 2016              | 5  |
++-------------------+----+
+| 2017 (all <80)    | 5  |
++-------------------+----+
+| 2018              | 5  |
++-------------------+----+
+| 2019              | 10 |
++-------------------+----+
+| 2020              | 1  |
++-------------------+----+
+| 2021              | 5  |
++-------------------+----+
+| 2022              | 4  |
++-------------------+----+
+| 2023              | 6  |
++-------------------+----+
+
+Now for my last crazy observation before moving onto my final thoughts, I counted the teams from each season to reach 70 PBQR or better and I found one more little anomaly. Not including 2020 which is a big outlier when it comes to this exact stat, every year has either 4, 5 or 6 teams reach this mark, except 2019. 2019 had 10. Unlike 2020, I could not find any reason why 2019 would have so many more dominant teams all at once than any other season. I already showed that 3 of the top 9 teams ever based on this metric were from 2019, but it doesn't stop there. Of course, 70 was a completely arbitrary choice, maybe cutting it off at just 65 will even the field out more; I chose it because 2021 TCU finished at 70, so I decided to see what all the best teams were who were theoretically championship caliber or better. Many teams who made the playoff did not even reach 70 PBQR. There were 6 P5 teams alone when that would be as much as any other year total, then there were 3 G5 teams when there was never more than 2 any other year, many times only being 1. Something was in the Gatorade that season. Perhaps they all dodged one another schedule-wise, allowing for more paths to better records.
+
+    +---------------------------------------+
+
+        ———> FINAL THOUGHTS <———
+
+While typing out this summary of my observations about my rating, it began to occur to me that the all-time rankings had fewer outliers than single-season data did. This makes sense to me, I am essentially just counting wins, and the larger the data set, the more accurate it is going to be. My question now is if this is worth using as a device to pick head-to-head matchups with, despite the fact of knowing there are outliers like Washington out there? And if I test this theory, do I ignore injuries and still pick FSU in the postseason had they drawn somebody like Ohio State in their bowl game? In order to truly test the rankings, I think that would be the best route.
+
+Perhaps the better rating system is staring me right in the face, though. I included quarters per game on most of these tables because my PBQR system gives bonuses for wins, which like I said just now ends up in the long run essentially just awards teams who win games, not quarters, which is what I originally sought out to count and see who won the most quarters. Let's take a look at what the ratings would be this past season if we just counted quarters straight up in the whole FBS.
+
++----+-------+---------------+-------+----+---+
+|    |       |      2023     |       |    |   |
++----+-------+---------------+-------+----+---+
+|    |  QPG  |       -       | 1/4's |  W | L |
++----+-------+---------------+-------+----+---+
+|  1 | 2.867 | Michigan      |   43  | 15 | 0 |
++----+-------+---------------+-------+----+---+
+|  2 | 2.786 | Georgia       |   39  | 13 | 1 |
++----+-------+---------------+-------+----+---+
+|  3 | 2.786 | Oregon        |   39  | 12 | 2 |
++----+-------+---------------+-------+----+---+
+|  4 | 2.769 | Notre Dame    |   36  | 10 | 3 |
++----+-------+---------------+-------+----+---+
+|  5 | 2.769 | Penn State    |   36  | 10 | 3 |
++----+-------+---------------+-------+----+---+
+|  6 | 2.769 | Kansas State  |   36  |  9 | 4 |
++----+-------+---------------+-------+----+---+
+|  7 | 2.615 | Ohio State    |   34  | 11 | 2 |
++----+-------+---------------+-------+----+---+
+|  8 | 2.615 | Oklahoma      |   34  | 10 | 3 |
++----+-------+---------------+-------+----+---+
+|  9 | 2.538 | LSU           |   33  | 10 | 3 |
++----+-------+---------------+-------+----+---+
+| 10 | 2.500 | Texas         |   35  | 12 | 2 |
++----+-------+---------------+-------+----+---+
+| 11 | 2.462 | James Madison |   32  | 11 | 2 |
++----+-------+---------------+-------+----+---+
+| 12 | 2.429 | Boise State   |   34  |  8 | 6 |
++----+-------+---------------+-------+----+---+
+| 13 | 2.357 | Liberty       |   33  | 13 | 1 |
++----+-------+---------------+-------+----+---+
+| 14 | 2.357 | Alabama       |   33  | 12 | 2 |
++----+-------+---------------+-------+----+---+
+| 15 | 2.357 | Toledo        |   33  | 11 | 3 |
++----+-------+---------------+-------+----+---+
+
+Michigan and Georgia are 1 and 2. We're off to a good start. Oregon, ok, they played great and only lost twice to the national runner up. But where is the national runner up? Well they are in 47th, of course, as I already mentioned a bit earlier. Surely this can't be a better system to pick matchups with, right? Again, there is only one way to find out, so I know what I am doing this season.
+
+Now, here Alabama stands out down at 14th and 11th best Power 5 team, barely squeaking into even a 12-team playoff, and it might be a bit more surprising to see teams like Ole Miss and Missouri not make this list, but to me the main surprise is K-State up at 6th. The even more curious thing is that this seems to be a trend for K-State going back the full 10 years.
+
++----+-------+-------------------+--------+------+-------+-----+-----+
+|    |       |                   |        | pbqr |  tot  | tot | tot |
+|    |  qpg  |                   |  PBQR  | rank | 1/4's |  W  |  L  |
++----+-------+-------------------+--------+------+-------+-----+-----+
+|  1 | 2.745 | Alabama           | 76.700 |   1  |  386  | 127 |  14 |
++----+-------+-------------------+--------+------+-------+-----+-----+
+|  2 | 2.649 | Ohio State        | 69.100 |   3  |  346  | 115 |  15 |
++----+-------+-------------------+--------+------+-------+-----+-----+
+|  3 | 2.479 | Clemson           | 70.400 |   2  |  347  | 119 |  20 |
++----+-------+-------------------+--------+------+-------+-----+-----+
+|  4 | 2.393 | Georgia           | 67.100 |   4  |  329  | 114 |  22 |
++----+-------+-------------------+--------+------+-------+-----+-----+
+|  5 | 2.357 | Appalachian State | 59.200 |   6  |  307  |  95 |  35 |
++----+-------+-------------------+--------+------+-------+-----+-----+
+|  6 | 2.352 | Michigan          | 58.900 |   7  |  307  |  94 |  32 |
++----+-------+-------------------+--------+------+-------+-----+-----+
+|  7 | 2.333 | Penn State        | 56.100 |  10  |  297  |  88 |  39 |
++----+-------+-------------------+--------+------+-------+-----+-----+
+|  8 | 2.325 | Oklahoma          | 61.000 |   5  |  304  | 102 |  29 |
++----+-------+-------------------+--------+------+-------+-----+-----+
+|  9 | 2.244 | Notre Dame        | 57.300 |   8  |  288  |  95 |  33 |
++----+-------+-------------------+--------+------+-------+-----+-----+
+| 10 | 2.216 | Boise State       | 56.600 |   9  |  284  |  94 |  34 |
++----+-------+-------------------+--------+------+-------+-----+-----+
+| 11 | 2.166 | Oregon            | 55.200 |  11  |  282  |  90 |  38 |
++----+-------+-------------------+--------+------+-------+-----+-----+
+| 12 | 2.144 | Memphis           | 54.200 |  13  |  278  |  88 |  41 |
++----+-------+-------------------+--------+------+-------+-----+-----+
+| 13 | 2.127 | LSU               | 54.500 |  12  |  275  |  90 |  38 |
++----+-------+-------------------+--------+------+-------+-----+-----+
+| 14 | 2.105 | Washington        | 52.300 |  17  |  262  |  87 |  38 |
++----+-------+-------------------+--------+------+-------+-----+-----+
+| 15 | 2.095 | Utah              | 52.500 |  16  |  267  |  86 |  40 |
++----+-------+-------------------+--------+------+-------+-----+-----+
+| 16 | 2.088 | Kansas State      | 49.600 |  22  |  268  |  76 |  51 |
++----+-------+-------------------+--------+------+-------+-----+-----+
+| 17 | 2.059 | Oklahoma State    | 53.500 |  15  |  268  |  89 |  41 |
++----+-------+-------------------+--------+------+-------+-----+-----+
+| 18 | 2.056 | UCF               | 50.300 |  21  |  263  |  80 |  47 |
++----+-------+-------------------+--------+------+-------+-----+-----+
+| 19 | 2.045 | Wisconsin         | 53.600 |  14  |  266  |  90 |  38 |
++----+-------+-------------------+--------+------+-------+-----+-----+
+| 20 | 2.045 | Toledo            | 50.400 |  19  |  255  |  83 |  41 |
++----+-------+-------------------+--------+------+-------+-----+-----+
+| 21 | 2.017 | Miami             | 47.300 |  34  |  254  |  73 |  53 |
++----+-------+-------------------+--------+------+-------+-----+-----+
+| 22 | 2.012 | Air Force         | 48.800 |  26  |  245  |  81 |  41 |
++----+-------+-------------------+--------+------+-------+-----+-----+
+| 23 | 1.995 | Iowa              | 51.700 |  18  |  253  |  88 |  40 |
++----+-------+-------------------+--------+------+-------+-----+-----+
+| 24 | 1.987 | Texas A&M         | 47.900 |  31  |  248  |  77 |  48 |
++----+-------+-------------------+--------+------+-------+-----+-----+
+| 25 | 1.981 | San Diego State   | 50.300 |  20  |  254  |  83 |  44 |
++----+-------+-------------------+--------+------+-------+-----+-----+
+
+Last table for real this time, but here are the all-time rankings of the last decade just by how many quarters per game a team has won. K-State is in 16th despite having less overall wins than every team behind them. As an all-time list again I do think this is much more accurate than just a single season's worth of data, but I am not sure if I am on board with it still. Does K-State deserve to be above Oklahoma State or Wisconsin? All of them do have reputations for "doing more with less," but the team that might be the king of that title is actually in the opposite position of K-State: the Iowa Hawkeyes. Iowa is back in 23rd despite having a whole 12 wins more than K-State. This is a testament to Iowa's play style, surely. They have found a way to win games over the last 20 years that many teams could only dream of with similar caliber players and talent.
+
+Maybe that is all this is worth, just being able to compare different programs' trajectories over the last 10 seasons. Looking at the field through a different lens than we usually do and using notable points of data to help tell certain narratives, but not necessarily ever use it to pick matchups or rank teams, in-season or all-time for that matter. For instance, I don't think it is fair to say K-State or Iowa has been "better" than one another over the last decade. This rating of course does not even recognize the existence of championships or any accolades at all. I do think you can draw some conclusions such as both Iowa and K-State are top 25ish teams and have earned that by winning more quarters than most of the FBS, and looking at the quarters won may just be a sign of their certain play styles and how some teams find a way to get the job done at the end of the game. Iowa got it done more often than State, but state won more quarters overall, so it might be safe to say that when they did win, they probably won by more than Iowa usually did. So they both found success in different ways.
+
+I alluded to tweaking the rankings a few times now, and based on styles of play like I just mentioned, I think it might be a better discussion to see who wins more halves than quarters, since each half resets and teams do not necessarily aim to win quarters since that is not how football works in real life. I would also like to experiment with subtracting points for lost quarters, or awarding half points for tied quarters, something along those lines; something to account for the other quarters I am not yet acknowledging. I still want to keep it simple and just use cumulative numbers and not have to learn how to write any functions in python or anything, this is a simple spreadsheet rating system^TM. SSRS for short. So the only other data points I would like to include are point margins and strength of schedule. Eventually if I refine it well enough to make a solid in-season version it may be fun to experiment with adding weight to championship/bowl/playoff games and conference/division titles and what not. But I think this year I am just going to stick with the basic PBQR and QPG, try to pick games for the first time and see which is more accurate, and then decide next off-season what exactly to tweak.
+
+□

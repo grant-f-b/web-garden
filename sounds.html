@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+        <!-- basic meta data -->
+        <title>G.F. Baldwin - sounds</title>
+        <meta name="description" content="sounds">
+        <meta name="author" content="grant">
+        <!-- standards -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- favicon -->
+        <link rel="apple-touch-icon" sizes="180x180" href="favicon_files/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon_files/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon_files/favicon-16x16.png">
+        <!-- OG social card data -->
+        <meta property="og:title" content="G.F. Baldwin - sounds">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://">
+        <meta property="og:description" content="sounds">
+        <meta property="og:image" content="/!/image.png/!/">
+        <!-- CSS & other links -->
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="manifest" href="css/site.webmanifest">
+        
+        <!-- maybe move this to bottom of body -->
+        <script type="module" src="https://md-block.verou.me/md-block.js"></script>
+	</head>
+
+<body>
+    <!-- header -->
+    <div class="h1" id="h2">
+    <header>    
+        <br>
+        <h3>⎔ ⎔ ⎔</h3> 
+        <a style="color: black; font-weight:bold" href="projects.html">things</a>
+        <a style="color: black; font-weight:bold" href="index.html">~𝖌𝖋𝖇~</a>
+        <a style="color: black; font-weight:bold" href="posts.html">writing</a>
+        <br><br>
+    </header></div>
+
+    <!-- content -->
+    <!-- italic title: style="font-style:italic;" -->
+
+    <h1><u>sounds</u></h1>
+    <p style="text-indent: 3rem;">
+        
+
+        ☙
+        ❦
+        ❧
+
+        𐡷
+        𐡸
+        𐫱
+
+    </p>
+
+    <!-- music lists -->
+<!-- early juice co -->>
+    <ul id="playlist">
+      <li>
+        <span>coffee</span>
+        <button class="playButton" data-track="audio1">Play</button>
+        <audio id="audio1" src="sounds/Coffee.m4a"></audio> </li>
+      <li>
+        <span>itchy eyes</span>
+        <button class="playButton" data-track="audio2">Play</button>
+        <audio id="audio2" src="sounds/Itchy Eyes-1.m4a"></audio>
+      </li>
+      <li>
+        <span>snake</span>
+        <button class="playButton" data-track="audio3">Play</button>
+        <audio id="audio3" src="sounds/Snake.m4a"></audio>
+      </li>
+      <li>
+        <span>parking lot</span>
+        <button class="playButton" data-track="audio3">Play</button>
+        <audio id="audio3" src="sounds/parklot.m4a"></audio>
+      </li>
+      </ul>
+    
+<!-- red and itchy juice co -->>
+<ul id="playlist">
+    <li>
+      <span>red foreman</span>
+      <button class="playButton" data-track="audio1">Play</button>
+      <audio id="audio1" src="sounds/TJC-Red Final Master.m4a"></audio> </li>
+    <li>
+      <span>itchy eyes</span>
+      <button class="playButton" data-track="audio2">Play</button>
+      <audio id="audio2" src="sounds/TJC-Itchy Eyes Final Master.m4a"></audio>
+    </li>
+    </ul>
+
+    <!-- fruit theory juice co -->>
+    <ul id="playlist">
+        <li>
+          <span>dying</span>
+          <button class="playButton" data-track="audio1">Play</button>
+          <audio id="audio1" src="sounds/JC - Dying Master 1.m4a"></audio> </li>
+        <li>
+          <span>long live jerry</span>
+          <button class="playButton" data-track="audio2">Play</button>
+          <audio id="audio2" src="sounds/JC - Jerry Master 2.m4a"></audio>
+        </li>
+        <li>
+          <span>january</span>
+          <button class="playButton" data-track="audio3">Play</button>
+          <audio id="audio3" src="sounds/JC - January Master 2.m4a"></audio>
+        </li>
+        </ul>
+
+<!-- no more fish juice co -->>
+<ul id="playlist">
+    <li>
+      <span>lucid dreams</span>
+      <button class="playButton" data-track="audio1">Play</button>
+      <audio id="audio1" src="sounds/Juice Co - Ludic Dream Master 1.wav"></audio> </li>
+    <li>
+      <span>just make you sad</span>
+      <button class="playButton" data-track="audio2">Play</button>
+      <audio id="audio2" src="sounds/Juice Co - Just Make You Sad Master 1.wav"></audio>
+    </li>
+    </ul>
+
+<!-- non juice co -->>
+<ul id="playlist">
+    <li>
+      <span>cherry street sinners</span>
+      <button class="playButton" data-track="audio1">Play</button>
+      <audio id="audio1" src="sounds/Cherry Street Sinners Mix 2.mp3"></audio> </li>
+    <li>
+      <span>music man</span>
+      <button class="playButton" data-track="audio2">Play</button>
+      <audio id="audio2" src="sounds/Music Man Mix 1.mp3"></audio>
+    </li>
+
+    <li>
+      <span>midi track</span>
+      <button class="playButton" data-track="audio3">Play</button>
+      <audio id="audio3" src="sounds/gbFinalmp3.mp3"></audio>
+    </li>
+    </ul>
+
+      <!-- audio player stuff -->
+    <script>
+      const playlist = document.getElementById('playlist');
+      const playButtons = playlist.querySelectorAll('.playButton');
+    
+      playButtons.forEach(button => {
+        const audioId = button.dataset.track;
+        const audio = document.getElementById(audioId);
+    
+        button.addEventListener('click', () => {
+          if (audio.paused) {
+            audio.play();
+            button.textContent = "Pause";
+          } else {
+            audio.pause();
+            button.textContent = "Play";
+          }
+        });
+    
+        // Optional: Display song duration
+        audio.addEventListener('loadedmetadata', () => {
+          const duration = formatTime(audio.duration);
+          const listItem = button.parentNode;
+          const durationSpan = document.createElement('span');
+          durationSpan.textContent = ` (${duration})`;
+          listItem.appendChild(durationSpan);
+        });
+    
+    
+        // Optional: Handle song ending
+        audio.addEventListener('ended', () => {
+           button.textContent = "Play"; // Reset button text
+        });
+    
+      });
+    
+      // Helper function to format time (e.g., 03:45)
+      function formatTime(seconds) {
+        const minutes = Math.floor(seconds / 60);
+        const remainingSeconds = Math.floor(seconds % 60);
+        const formattedSeconds = remainingSeconds < 10 ? '0' + remainingSeconds : remainingSeconds;
+        return minutes + ':' + formattedSeconds;
+      }
+    
+    </script>
+
+
+    
+    <!-- footer -->
+    <footer>
+        <br>
+        <h3>𝕲𝕱𝕭</h3>
+        <br><br>
+    </footer>
+
+<!-- SCRIPTS -->
+    <script>
+        window.onscroll = function() {myFunction()};
+        
+        var header = document.getElementById("h2");
+        var sticky = header.offsetTop;
+        
+        function myFunction() {
+          if (window.pageYOffset > sticky) {
+            header.classList.add("sticky");
+          } else {
+            header.classList.remove("sticky");
+          }
+        }
+        </script>
+
+        </body>
