@@ -22,7 +22,43 @@
         <link rel="stylesheet" href="css/reset.css">
         <link rel="stylesheet" type="text/css" href="css/style.css">
         <link rel="manifest" href="css/site.webmanifest">
-        
+        <style>
+            /* ... (Previous CSS styles) ... */
+            .slider-container {
+              width: 200px; /* Adjust as needed */
+              margin-top: 5px;
+            }
+            .slider {
+              -webkit-appearance: none; /* Customize the slider */
+              width: 100%;
+              height: 5px;
+              background: #ddd;
+              outline: none;
+              opacity: 0.7;
+              -webkit-transition: .2s;
+              transition: opacity .2s;
+              cursor: pointer;
+            }
+          
+            .slider::-webkit-slider-thumb {
+              -webkit-appearance: none;
+              appearance: none;
+              width: 15px;
+              height: 15px;
+              border-radius: 50%;
+              background: #4CAF50; /* Or any color you like */
+              cursor: pointer;
+            }
+          
+            .slider::-moz-range-thumb {
+              width: 15px;
+              height: 15px;
+              border-radius: 50%;
+              background: #4CAF50;
+              cursor: pointer;
+            }
+          
+          </style>
         <!-- maybe move this to bottom of body -->
         <script type="module" src="https://md-block.verou.me/md-block.js"></script>
 	</head>
@@ -63,17 +99,32 @@
 <h4 style="font-weight:bold; text-indent: 3rem;">random stuff</h4>
       <li>
         <span>coffee</span>
+        <div class="slider-container">
+            <input type="range" min="0" max="100" value="0" class="slider" data-track="audio1">
+          </div>
         <button class="playButton" data-track="audio1">Play</button>
-        <audio id="audio1" src="sounds/coffee..m4a"></audio> </li>
+        <audio id="audio1" src="sounds/coffee..m4a"></audio> 
+
+    </li>
+    <br>
       <li>
         <span>silent night</span>
+        <div class="slider-container">
+            <input type="range" min="0" max="100" value="0" class="slider" data-track="audio1">
+          </div>
         <button class="playButton" data-track="audio2">Play</button>
         <audio id="audio2" src="sounds/silent night.m4a"></audio>
+
       </li>
+      <br>
       <li>
         <span>parking lot</span>
+        <div class="slider-container">
+            <input type="range" min="0" max="100" value="0" class="slider" data-track="audio1">
+          </div>
         <button class="playButton" data-track="audio3">Play</button>
         <audio id="audio3" src="sounds/parklot.m4a"></audio>
+
       </li>
 
 <br><br>
@@ -84,32 +135,57 @@
 
       <li>
         <span>snake</span>
+        <div class="slider-container">
+            <input type="range" min="0" max="100" value="0" class="slider" data-track="audio1">
+          </div>
         <button class="playButton" data-track="audio4">Play</button>
-        <audio id="audio4" src="sounds/Snake.m4a"></audio> </li>
+        <audio id="audio4" src="sounds/Snake.m4a"></audio> 
+    </li>
+    <br>
       <li>
         <span>bittersweet</span>
+        <div class="slider-container">
+            <input type="range" min="0" max="100" value="0" class="slider" data-track="audio1">
+          </div>
         <button class="playButton" data-track="audio5">Play</button>
         <audio id="audio5" src="sounds/Bittersweet.m4a"></audio>
       </li>
+      <br>
       <li>
         <span>itchy eyes</span>
+        <div class="slider-container">
+            <input type="range" min="0" max="100" value="0" class="slider" data-track="audio1">
+          </div>
         <button class="playButton" data-track="audio6">Play</button>
         <audio id="audio6" src="sounds/Itchy Eyes-1.m4a"></audio>
+    
       </li>
+      <br>
       <li>
         <span>evil.</span>
+        <div class="slider-container">
+            <input type="range" min="0" max="100" value="0" class="slider" data-track="audio1">
+          </div>
         <button class="playButton" data-track="audio7">Play</button>
         <audio id="audio7" src="sounds/Evil.m4a"></audio>
       </li>
+      <br>
       <li>
         <span>coffee</span>
+        <div class="slider-container">
+            <input type="range" min="0" max="100" value="0" class="slider" data-track="audio1">
+          </div>
         <button class="playButton" data-track="audio8">Play</button>
         <audio id="audio8" src="sounds/Coffee.m4a"></audio>
-      </li>
+      </li><br>
       <li>
         <span>bet you always</span>
+        <div class="slider-container">
+            <input type="range" min="0" max="100" value="0" class="slider" data-track="audio1">
+          </div>
         <button class="playButton" data-track="audio9">Play</button>
         <audio id="audio9" src="sounds/Bet You Always.m4a"></audio>
+
       </li>
 
 <!-- red and itchy juice co -->
@@ -120,12 +196,21 @@
 
     <li>
       <span>red foreman</span>
+      <div class="slider-container">
+        <input type="range" min="0" max="100" value="0" class="slider" data-track="audio1">
+      </div>
       <button class="playButton" data-track="audio10">Play</button>
-      <audio id="audio10" src="sounds/TJC-Red Final Master.m4a"></audio> </li>
+      <audio id="audio10" src="sounds/TJC-Red Final Master.m4a"></audio> 
+  
+    </li><br>
     <li>
       <span>itchy eyes</span>
+      <div class="slider-container">
+        <input type="range" min="0" max="100" value="0" class="slider" data-track="audio1">
+      </div>
       <button class="playButton" data-track="audio11">Play</button>
       <audio id="audio11" src="sounds/TJC-Itchy Eyes Final Master.m4a"></audio>
+
     </li>
     
 
@@ -136,15 +221,27 @@
 
         <li>
           <span>dying</span>
+          <div class="slider-container">
+            <input type="range" min="0" max="100" value="0" class="slider" data-track="audio1">
+          </div>
           <button class="playButton" data-track="audio12">Play</button>
-          <audio id="audio12" src="sounds/JC - Dying Master 1.m4a"></audio> </li>
+          <audio id="audio12" src="sounds/JC - Dying Master 1.m4a"></audio> 
+
+        </li><br>
         <li>
           <span>long live jerry</span>
+          <div class="slider-container">
+            <input type="range" min="0" max="100" value="0" class="slider" data-track="audio1">
+          </div>
           <button class="playButton" data-track="audio13">Play</button>
           <audio id="audio13" src="sounds/JC - Jerry Master 2.m4a"></audio>
-        </li>
+
+        </li><br>
         <li>
           <span>january</span>
+          <div class="slider-container">
+            <input type="range" min="0" max="100" value="0" class="slider" data-track="audio1">
+          </div>
           <button class="playButton" data-track="audio14">Play</button>
           <audio id="audio14" src="sounds/JC - January Master 2.m4a"></audio>
         </li>
@@ -158,12 +255,21 @@
 
     <li>
       <span>lucid dreams</span>
+      <div class="slider-container">
+        <input type="range" min="0" max="100" value="0" class="slider" data-track="audio1">
+      </div>
       <button class="playButton" data-track="audio15">Play</button>
-      <audio id="audio15" src="sounds/Juice Co - Ludic Dream Master 1.wav"></audio> </li>
+      <audio id="audio15" src="sounds/Juice Co - Ludic Dream Master 1.wav"></audio> 
+
+    </li><br>
     <li>
       <span>just make you sad</span>
+      <div class="slider-container">
+        <input type="range" min="0" max="100" value="0" class="slider" data-track="audio1">
+      </div>
       <button class="playButton" data-track="audio16">Play</button>
       <audio id="audio16" src="sounds/Juice Co - Just Make You Sad Master 1.wav"></audio>
+
     </li>
    
     <!-- gfb -->
@@ -176,23 +282,38 @@
     <h4 style="font-weight:bold">a mix of old guitar and midi tracks</h4>
     <li>
         <span>january</span>
+        <div class="slider-container">
+            <input type="range" min="0" max="100" value="0" class="slider" data-track="audio1">
+          </div>
         <button class="playButton" data-track="audio17">Play</button>
         <audio id="audio17" src="sounds/january 2.m4a"></audio>
-      </li>
+
+      </li><br>
       <li>
         <span>winona</span>
+        <div class="slider-container">
+            <input type="range" min="0" max="100" value="0" class="slider" data-track="audio1">
+          </div>
         <button class="playButton" data-track="audio18">Play</button>
         <audio id="audio18" src="sounds/johnny deppression.m4a"></audio>
-      </li>
+
+      </li><br>
     <li>
         <span>ww</span>
+        <div class="slider-container">
+            <input type="range" min="0" max="100" value="0" class="slider" data-track="audio1">
+          </div>
         <button class="playButton" data-track="audio19">Play</button>
         <audio id="audio19" src="sounds/ww.m4a"></audio>
-      </li>
+      </li><br>
     <li>
       <span>midi track</span>
+      <div class="slider-container">
+        <input type="range" min="0" max="100" value="0" class="slider" data-track="audio1">
+      </div>
       <button class="playButton" data-track="audio20">Play</button>
       <audio id="audio20" src="sounds/gbFinalmp3.mp3"></audio>
+
     </li>
 
 
@@ -206,12 +327,21 @@
 
     <li>
       <span>cherry street sinners</span>
+      <div class="slider-container">
+        <input type="range" min="0" max="100" value="0" class="slider" data-track="audio1">
+      </div>
       <button class="playButton" data-track="audio21">Play</button>
-      <audio id="audio21" src="sounds/Cherry Street Sinners Mix 2.mp3"></audio> </li>
+      <audio id="audio21" src="sounds/Cherry Street Sinners Mix 2.mp3"></audio> 
+
+    </li><br>
     <li>
       <span>music man</span>
+      <div class="slider-container">
+        <input type="range" min="0" max="100" value="0" class="slider" data-track="audio1">
+      </div>
       <button class="playButton" data-track="audio22">Play</button>
       <audio id="audio22" src="sounds/Music Man Mix 1.mp3"></audio>
+
     </li>
     <br>
 
@@ -236,6 +366,14 @@
             button.textContent = "Play";
           }
         });
+
+              // Helper function to format time (e.g., 03:45)
+      function formatTime(seconds) {
+        const minutes = Math.floor(seconds / 60);
+        const remainingSeconds = Math.floor(seconds % 60);
+        const formattedSeconds = remainingSeconds < 10 ? '0' + remainingSeconds : remainingSeconds;
+        return minutes + ':' + formattedSeconds;
+      }
     
         // Optional: Display song duration
         audio.addEventListener('loadedmetadata', () => {
@@ -254,13 +392,7 @@
     
       });
     
-      // Helper function to format time (e.g., 03:45)
-      function formatTime(seconds) {
-        const minutes = Math.floor(seconds / 60);
-        const remainingSeconds = Math.floor(seconds % 60);
-        const formattedSeconds = remainingSeconds < 10 ? '0' + remainingSeconds : remainingSeconds;
-        return minutes + ':' + formattedSeconds;
-      }
+
     
     </script>
 
@@ -288,5 +420,39 @@
           }
         }
         </script>
+
+
+<script>
+    // ... (Previous JavaScript code) ...
+  
+    playButtons.forEach(button => {
+      // ... (Existing play/pause code) ...
+  
+      const audioId = button.dataset.track;
+      const audio = document.getElementById(audioId);
+      const slider = button.parentNode.querySelector('.slider'); // Get the slider for this song
+  
+      // Update slider as song plays
+      audio.addEventListener('timeupdate', () => {
+        if (!isNaN(audio.duration)) { // Check if duration is valid
+          const value = (100 / audio.duration) * audio.currentTime;
+          slider.value = value;
+        }
+      });
+  
+      // Move song position when slider is dragged
+      slider.addEventListener('input', () => {
+         if (!isNaN(audio.duration)) { // Check if duration is valid
+          const time = (slider.value / 100) * audio.duration;
+          audio.currentTime = time;
+        }
+      });
+  
+      // ... (Existing loadedmetadata and ended event handlers) ...
+  
+    });
+  
+  
+  </script>
 
         </body>
