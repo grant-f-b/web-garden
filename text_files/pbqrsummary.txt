@@ -5,7 +5,7 @@
         ———> 2023. <———
 
 
-I started a college football rating system and started housing it on my own Github-hosted site over @ https://www.gfbald.win/pbqrf/pbqr_hub.html. Here is the explanation of my ratings straight from that page:
+I created a college football rating system and started housing it on my own Github-hosted site over @ https://www.gfbald.win/pbqrf/pbqr_hub.html. Here is the explanation of my ratings straight from that page:
 
 "The Points by Quarter Rating is a points-based rating system that rewards teams for winning each quarter of the game, as viewed in the box score, as well as points for winning the game as a whole. Teams are rewarded one point for each quarter in which they score more points than their opponent, and three points for winning the game. Each game is then worth a total of up to seven points. No team is awarded points for quarters that end in ties, and no points are awarded for any overtime periods.
 
@@ -15,7 +15,7 @@ Now that I have been doing this for 3 seasons and I backtracked and filled in th
 
 I have tweaked the rating system several times throughout the last three years, trying to weigh the ratings on team's overall projected talent using recruiting rankings, but ultimately I could not find a formula that worked year after year. Talent composites have also become increasingly difficult to find ever since the portal opened up. The main formula for the rating always stayed the same, so I decided to roll with this stripped down version that is just the original formula that rewards points for winning quarters. That's it, no grading based on a curve or weeding out lesser competition with SOS or talent composite. When it comes down to it, we will just look at Power 5 (RIP) and Group of 5 separately.
 
-One big note: all of the data we will be looking at includes post season games, so some teams have played up to 3 more games than other teams. In order to make it a bit easier to discern how teams actually stand relative to one another, I included a QPG column, or "Quarters per Game." This tells on average how many quarters a team usually wins each game, which is essentially the one stat this entire rating system is built on, and I think it should be able to help you figure out where teams may have stood before the playoff, bowls, and championship games were played out.
+One big note: all of the data we will be looking at includes post-season games, so some teams have played up to 3 more games than other teams. In order to make it a bit easier to discern how teams actually stand relative to one another, I included a QPG column, or "Quarters per Game." This tells on average how many quarters a team usually wins each game, which is essentially the one stat this entire rating system is built on, and I think it should be able to help you figure out where teams may have stood before the playoff, bowls, and championship games were played out.
 
 +----+------+---------------+-------+----+---+-------+
 |                    PBQR 2023                       |
@@ -340,9 +340,9 @@ I am never going to do a whole analysis like this and spend too much time on the
 | Liberty           | 1  |
 +-------------------+----+
 
-The table above shows the amount of times each team has finished above 70 PBQR. The table itself is not all that surprising, especially on top. Bama reached the goal 8/10 times, and were the only team to do it during the covid year. Clemson, Ohio State and Georgia hit an even 50%; Michigan, Oregon, and TCU all made multiple appearances. The most surprising parts to me were LSU and Oklahoma with only one a piece, and then the teams who never made it past 70 at all: Penn State, A&M, USC, and Notre Dame, especially the latter two, who made the playoffs at least once.
+The table above shows the amount of times each team has finished above 70 PBQR. The table itself is not all that surprising, especially on top. Bama reached the goal 8/10 times, and were the only team to do it during the covid year. Clemson, Ohio State and Georgia hit an even 50%; Michigan, Oregon, and TCU all made multiple appearances. The most surprising parts to me were LSU and Oklahoma with only one a piece, and then the teams who never made it past 70 at all: Penn State, A&M, USC, and maybe most surprising: Notre Dame, who even made the playoff at least once. 
 
-The most interesting thing with the Group 5 is definitely Houston, who was one of only 3 teams to peak over 70 twice, yet they did not make the top 12 overall G5 teams. They had a lot of coaching turnover during these years but I assumed they'd have a higher average with teams like that on their resume.
+The most interesting thing with the Group of 5 is definitely Houston, who was one of only 3 teams to peak over 70 twice, yet they did not make the top 12 overall G5 teams. They had a lot of coaching turnover during these years but I assumed they'd have a higher average with teams like that on their resume.
 
 
 +-------------------+----+
