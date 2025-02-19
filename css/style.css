@@ -119,13 +119,16 @@
     min-width: auto;
   }
 
-
+ /* SELECTION COLOR */ 
+::selection {
+  background: #FF8000;
+}  
 
 /* LISTS */
 
 
 
-/* HOVER SECTION */
+/* HOVER SECTION 
 div.ex {
   background-color: yellow;
   padding: 20px;
@@ -139,9 +142,8 @@ span.tx:hover + div {
 :root {
   --highlight-color: null;
 }
+*/
 
-::selection {
-  background: var(--highlight-color);
-}
+  
 
 /* ---TEST--- */
