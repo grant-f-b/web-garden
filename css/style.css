@@ -37,7 +37,7 @@
   
   /* ---BODY / CONTENT--- */
   body {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: monospace;
     padding: 1rem;
     max-width: var(--content-width);
     margin-left: auto;
