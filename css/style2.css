@@ -37,7 +37,7 @@
     cursor: pointer;
     margin-top: 10px; /* Position the label */
     height: 38px;
-    background: linear-gradient(to bottom, #fffdd0 0%, #9acd32 100%);
+    background: linear-gradient(to bottom, #fffcbd 0%, #9acd32 100%);
   }
   .ratings-div {
     height: calc(28.3px * (25 + 1));
@@ -45,7 +45,6 @@
   }
 
   .yearlinks {
-    border: 1px solid black;
     width: 100%;
     overflow: hidden;
     white-space: nowrap;
