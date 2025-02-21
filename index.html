@@ -64,15 +64,47 @@
     <div class="mid">
     <p>
         <span style="font-weight: bold;">latest update:</span> 
-        <a style="color:#00aeff;" href="sounds.html">I added a section of music files that I've made with my friends</a> 
+        <a style="color:#650AE6;" href="posts.html">i updated the style of my writing posts which you can also access from the new site directory below :)</a> 
     </p>
     </div>
 
     <hr style="border: 5px dashed #9acd32"> 
-    <br>
+    <br><br><br> 
 
+    <h3 style="text-align: center;">site directory</h3>
+<br>
+
+    <!-- site directory tree -->
+    <div style="text-indent: 45%">
+      <title>Collapsible Site Tree</title>
+      
+      <div class="tree">
+        <ul>
+          <li><span style="font-size: larger; font-weight: bolder;"></span><a style="color: #650AE6;" href="index.html">homepage</a></li>
+          <li>
+            <span style="font-size: larger; font-weight: bolder;"></span><a style="color:#650AE6;" href="projects.html">things</a>
+            <ul>
+              <li><span style="font-size: larger; font-weight: bolder;"></span><a style="color:#650AE6;" href="sounds.html">music</a></li>
+              <li><span style="font-size: larger; font-weight: bolder;"></span><a style="color:#650AE6;" href="pbqrf/pbqr_hub.html">PBQR</a></li>
+              <li><span style="font-size: larger; font-weight: bolder;"></span><a style="color:#650AE6;" href="gifgallery.html">gif gallery</a></li>
+            </ul>
+          </li>
+          <li>
+            <span style="font-size: larger; font-weight: bolder;"></span><a style="color:#650AE6;" href="posts.html">writing</a>
+            <ul>
+              <li><span style="font-size: larger; font-weight: bolder;"></span><a style="color:#650AE6;" href="text_files/sitelog_2.html">site log #1</a></li>
+              <li><span style="font-size: larger; font-weight: bolder;"></span><a style="color:#650AE6;" href="text_files/writingstuff_2.html">writing stuff down</a></li>
+              <li><span style="font-size: larger; font-weight: bolder;"></span><a style="color:#650AE6;" href="text_files/pbqrsummary_2.html">PBQR summary</a></li>
+            </ul>
+          </li>
+          <li><span style="font-size: larger; font-weight: bolder;"></span><a style="color:#650AE6;" href="text_files/site_notes_2.html">site notes</a></li>
+        </ul>
+      </div>
+  
+    </div>
     
-    
+<br><br>
+
 
     <!-- footer -->
     <footer>
@@ -114,6 +146,20 @@ window.addEventListener("mousedown", (e) => {
 });
 </script>
 
+<!-- site tree -->
+<script>
+  const treeItems = document.querySelectorAll('.tree li');
+
+  treeItems.forEach(item => {
+    const hasChildren = item.querySelector('ul'); // Check if the item has children
+
+    if (hasChildren) {      
+      item.addEventListener('click', () => {
+        item.classList.toggle('active'); // Toggle the 'active' class
+      });
+    }
+  });
+</script>
 
 
 
