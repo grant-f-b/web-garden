@@ -4,3 +4,35 @@
  ::selection {
   background: #FF8000;
 }  
+
+
+
+
+/* palette table */
+
+.palette-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Responsive grid */
+  gap: 20px;
+  padding: 20px;
+}
+.color-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center horizontally */
+  justify-content: center; /* Center vertically */
+  padding: 10px;
+  border: 1px solid #000000; /* Optional border */
+  border-radius: 5px; /* Optional rounded corners */
+}
+.color-preview {
+  width: 100%;
+  height: 100px; /* Adjust height as needed */
+  margin-bottom: 10px;
+  border: 1px solid #000000;
+  border-radius: 5px; /* Optional rounded corners */
+
+}
+.hex-code {
+  font-size: 1.2em;
+}
