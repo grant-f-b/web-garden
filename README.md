@@ -1,7 +1,5 @@
 # web-garden
 
-this is my own digital garden that i can tend to and keep building onto 
+this is my digital garden
 
-my first goal is organizing a journal/blog section for posting my thoughts and notes mostly probably about this site and how i have created it
-
-second, i intend to create a spot to host my college football rating system and then hopefully eventually add more projects maybe like a hub of lists or a web-comic page
+it's kind of a just a blog, but hopefully after adding to it for a while it will become more of a personal wiki and a place to house all of my creative projects like music and writing and stupid gifs

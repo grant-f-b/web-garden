@@ -42,7 +42,8 @@
     max-width: var(--content-width);
     margin-left: auto;
     margin-right: auto;
-    background-color: #fffdd0;
+    background-color: #fffcbd;
+    color: #000000;
   }
   
   header {
