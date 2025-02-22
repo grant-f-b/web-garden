@@ -173,34 +173,34 @@ span.tx:hover + div {
 
 /* Connector lines */
 .tree li::before {
-  content: "";
+ /* content: "";
   position: absolute;
-  top: 10px; /* Adjust vertical position as needed */
-  left: -10px; /* Adjust horizontal position as needed */
-  height: calc(100% - 20px); /* Adjust height as needed */
-  border-left: 1px solid #ccc; /* Customize line color */
+  top: 10px;  Adjust vertical position as needed */
+  /*left: -10px;  Adjust horizontal position as needed */
+  /*height: calc(100% - 20px);  Adjust height as needed */
+  /* border-left: 1px solid #ccc;  Customize line color */
 }
 .tree li:last-child::before { /* No line for the last child */
-  height: 10px; /* Short stub for last child */
+  /* height: 10px; Short stub for last child */
 }
 
 .tree li span::before { /* Unicode characters */
-  content: "\251C"; /* T-junction */
+  content: "╠═"; /* T-junction */
   margin-right: 5px;
 }
 .tree li.active > span::before {
-  content: "\2514"; /* L-junction */
+  content: "╚═"; /* L-junction */
 }
 .tree li:last-child > span::before {
-  content: "\2514"; /* Top-left corner for the last child */
+  content: "╚═"; /* Top-left corner for the last child */
 }
 
-/* Hide connector line for root level*/
+/* Hide connector line for root level
 .tree > ul > li::before {
     display: none;
 }
 
-
+*/
 
 
 
