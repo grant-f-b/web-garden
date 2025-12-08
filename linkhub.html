@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bookmarks</title>
     <style>
-        body { background: #000; color: #0f0; font-family: monospace; padding: 20px; }
-        .f, .sf { cursor: pointer; user-select: none; margin: 8px 0; font-weight: bold; }
+        body { background: #000; color: #0f0; font-family: monospace; padding: 20px; font-size: 18px; }
+        .f, .sf { cursor: pointer; user-select: none; margin: 12px 0; font-weight: bold; }
         .f::before, .sf::before { content: '> '; }
         .f.open::before, .sf.open::before { content: 'v '; }
         .fc, .sfc { display: none; padding-left: 20px; }
         .fc.show, .sfc.show { display: block; }
-        a { color: inherit; text-decoration: none; display: block; margin: 5px 0; }
+        a { color: inherit; text-decoration: none; display: block; margin: 8px 0; }
         a:hover { text-decoration: underline; }
         .top-link { font-size: 1.5em; }
         .cal { font-size: 1.3em; }
@@ -29,13 +29,13 @@
 <body>
 
     <!-- Top Links -->
-    <a href="https://example.com" class="green top-link">✉</a>
-    <a href="https://example.com" class="green top-link cal">📅︎</a>
-    <a href="https://example.com" class="green top-link">🗀</a>
-    <a href="https://example.com" class="green top-link">🔒︎</a>
+    <a href="https://example.com" class="green top-link">✉️</a>
+    <a href="https://example.com" class="green top-link">📅</a>
+    <a href="https://example.com" class="green top-link">📁</a>
+    <a href="https://example.com" class="green top-link">🔒</a>
 
-    <!-- ★ -->
-    <div class="f green">★</div>
+    <!-- ⭐ -->
+    <div class="f green top-link">⭐</div>
     <div class="fc">
         <a href="https://example.com" class="green">Star Link 1</a>
         <a href="https://example.com" class="green">Star Link 2</a>
@@ -46,10 +46,10 @@
         <a href="https://example.com" class="green">Star Link 7</a>
     </div>
 
-    <!-- 🔧︎ -->
-    <div class="f green">🔧︎</div>
+    <!-- 🔧 -->
+    <div class="f green top-link">🔧</div>
     <div class="fc">
-        <div class="sf green">search engines</div>
+        <div class="sf green">search engine</div>
         <div class="sfc">
             <a href="https://example.com" class="green">Tool 1</a>
             <a href="https://example.com" class="green">Tool 2</a>
@@ -75,11 +75,11 @@
     <hr>
 
     <!-- daily -->
-    <div class="f cyan">daily</div>
+    <div class="f green">daily</div>
     <div class="fc">
-        <a href="https://example.com" class="cyan">Daily Site 1</a>
-        <a href="https://example.com" class="cyan">Daily Site 2</a>
-        <a href="https://example.com" class="cyan">Daily Site 3</a>
+        <a href="https://example.com" class="green">Daily Site 1</a>
+        <a href="https://example.com" class="green">Daily Site 2</a>
+        <a href="https://example.com" class="green">Daily Site 3</a>
     </div>
 
     <!-- news -->
@@ -96,12 +96,12 @@
             <a href="https://example.com" class="orange">National 2</a>
             <a href="https://example.com" class="orange">National 3</a>
         </div>
-        <div class="sf orange">forums</div>
+        <div class="sf orange">forum</div>
         <div class="sfc">
             <a href="https://example.com" class="orange">Tech 1</a>
             <a href="https://example.com" class="orange">Tech 2</a>
         </div>
-        <div class="sf orange">live trends</div>
+        <div class="sf orange">media trends</div>
         <div class="sfc">
             <a href="https://example.com" class="orange">World 1</a>
             <a href="https://example.com" class="orange">World 2</a>
@@ -115,88 +115,88 @@
     </div>
 
     <!-- sports -->
-    <div class="f red">sports</div>
+    <div class="f cyan">sports</div>
     <div class="fc">
-        <div class="sf red">scores</div>
+        <div class="sf cyan">scores</div>
         <div class="sfc">
-            <a href="https://example.com" class="red">Football 1</a>
-            <a href="https://example.com" class="red">Football 2</a>
+            <a href="https://example.com" class="cyan">Football 1</a>
+            <a href="https://example.com" class="cyan">Football 2</a>
         </div>
-        <div class="sf red">stats & data</div>
+        <div class="sf cyan">stats & data</div>
         <div class="sfc">
-            <a href="https://example.com" class="red">Basketball 1</a>
-            <a href="https://example.com" class="red">Basketball 2</a>
-            <a href="https://example.com" class="red">Basketball 3</a>
+            <a href="https://example.com" class="cyan">Basketball 1</a>
+            <a href="https://example.com" class="cyan">Basketball 2</a>
+            <a href="https://example.com" class="cyan">Basketball 3</a>
         </div>
-        <div class="sf red">polls & rankings</div>
+        <div class="sf cyan">polls & rankings</div>
         <div class="sfc">
-            <a href="https://example.com" class="red">Baseball 1</a>
-            <a href="https://example.com" class="red">Baseball 2</a>
+            <a href="https://example.com" class="cyan">Baseball 1</a>
+            <a href="https://example.com" class="cyan">Baseball 2</a>
         </div>
-        <div class="sf red">local sports</div>
+        <div class="sf cyan">local sports</div>
         <div class="sfc">
-            <a href="https://example.com" class="red">Soccer 1</a>
-            <a href="https://example.com" class="red">Soccer 2</a>
+            <a href="https://example.com" class="cyan">Soccer 1</a>
+            <a href="https://example.com" class="cyan">Soccer 2</a>
         </div>
-        <div class="sf red">sports blogs</div>
+        <div class="sf cyan">sports blogs</div>
         <div class="sfc">
-            <a href="https://example.com" class="red">Hockey 1</a>
-            <a href="https://example.com" class="red">Hockey 2</a>
+            <a href="https://example.com" class="cyan">Hockey 1</a>
+            <a href="https://example.com" class="cyan">Hockey 2</a>
         </div>
     </div>
 
     <!-- reads -->
-    <div class="f yellow">reads</div>
+    <div class="f pink">reads</div>
     <div class="fc">
-        <a href="https://example.com" class="yellow">Substack</a>
-        <div class="sf yellow">blogs</div>
+        <a href="https://example.com" class="pink">Reading Site</a>
+        <div class="sf pink">blogs</div>
         <div class="sfc">
-            <a href="https://example.com" class="yellow">Blog 1</a>
-            <a href="https://example.com" class="yellow">Blog 2</a>
+            <a href="https://example.com" class="pink">Blog 1</a>
+            <a href="https://example.com" class="pink">Blog 2</a>
         </div>
-        <div class="sf yellow">culture</div>
+        <div class="sf pink">culture</div>
         <div class="sfc">
-            <a href="https://example.com" class="yellow">Article 1</a>
-            <a href="https://example.com" class="yellow">Article 2</a>
+            <a href="https://example.com" class="pink">Article 1</a>
+            <a href="https://example.com" class="pink">Article 2</a>
         </div>
-        <div class="sf yellow">tech/science/math</div>
+        <div class="sf pink">tech/science/math</div>
         <div class="sfc">
-            <a href="https://example.com" class="yellow">Book 1</a>
-            <a href="https://example.com" class="yellow">Book 2</a>
+            <a href="https://example.com" class="pink">Book 1</a>
+            <a href="https://example.com" class="pink">Book 2</a>
         </div>
     </div>
 
     <!-- media -->
-    <div class="f pink">media</div>
+    <div class="f yellow">media</div>
     <div class="fc">
-        <div class="sf pink">streaming</div>
+        <div class="sf yellow">streaming</div>
         <div class="sfc">
-            <a href="https://example.com" class="pink">Video 1</a>
-            <a href="https://example.com" class="pink">Video 2</a>
+            <a href="https://example.com" class="yellow">Video 1</a>
+            <a href="https://example.com" class="yellow">Video 2</a>
         </div>
-        <div class="sf pink">radio</div>
+        <div class="sf yellow">webcomics</div>
         <div class="sfc">
-            <a href="https://example.com" class="pink">Music 1</a>
-            <a href="https://example.com" class="pink">Music 2</a>
+            <a href="https://example.com" class="yellow">Music 1</a>
+            <a href="https://example.com" class="yellow">Music 2</a>
         </div>
-        <div class="sf pink">webcomics</div>
+        <div class="sf yellow">web radio</div>
         <div class="sfc">
-            <a href="https://example.com" class="pink">Podcast 1</a>
-            <a href="https://example.com" class="pink">Podcast 2</a>
+            <a href="https://example.com" class="yellow">Podcast 1</a>
+            <a href="https://example.com" class="yellow">Podcast 2</a>
         </div>
     </div>
 
     <!-- games -->
-    <div class="f cyan">games</div>
+    <div class="f red">games</div>
     <div class="fc">
-        <div class="sf cyan">daily games</div>
+        <div class="sf red">daily games</div>
         <div class="sfc">
-            <a href="https://example.com" class="cyan">News 1</a>
-            <a href="https://example.com" class="cyan">News 2</a>
+            <a href="https://example.com" class="red">News 1</a>
+            <a href="https://example.com" class="red">News 2</a>
         </div>
-        <a href="https://example.com" class="cyan">Game Site 1</a>
-        <a href="https://example.com" class="cyan">Game Site 2</a>
-        <a href="https://example.com" class="cyan">Game Site 3</a>
+        <a href="https://example.com" class="red">Game Site 1</a>
+        <a href="https://example.com" class="red">Game Site 2</a>
+        <a href="https://example.com" class="red">Game Site 3</a>
     </div>
 
     <div style="margin-top: 20px; font-weight: bold;" class="green">⬡</div>
