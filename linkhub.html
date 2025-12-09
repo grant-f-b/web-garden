@@ -6,6 +6,31 @@
     <title>Bookmarks</title>
     <style>
         body { background: #000; color: #0f0; font-family: monospace; padding: 20px; font-size: 18px; max-width: 600px; margin: 0 auto; }
+        
+        /* Icon Grid Styles */
+        .icon-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            max-width: 200px;
+            margin: 0 auto 20px;
+            padding: 10px 0;
+        }
+        
+        .icon-grid a {
+            font-size: 2em;
+            text-align: center;
+            margin: 0;
+            padding: 10px;
+            border-radius: 8px;
+            transition: transform 0.2s;
+        }
+        
+        .icon-grid a:hover {
+            transform: scale(1.1);
+            text-decoration: none;
+        }
+        
         .f, .sf { cursor: pointer; user-select: none; margin: 12px 0; font-weight: bold; }
         .f::before, .sf::before { content: '> '; }
         .f.open::before, .sf.open::before { content: 'v '; }
@@ -29,11 +54,13 @@
 </head>
 <body>
 
-    <!-- Top Links -->
-    <a href="https://mail.google.com" class="green top-link">✉️</a>
-    <a href="https://calendar.google.com/calendar" class="green top-link">📅</a>
-    <a href="https://drive.google.com/drive/starred" class="green top-link">📁</a>
-    <a href="https://vault.bitwarden.com" class="green top-link">🔒</a>
+    <!-- Top Icon Grid -->
+    <div class="icon-grid">
+        <a href="https://mail.google.com" class="green">✉️</a>
+        <a href="https://drive.google.com/drive/starred" class="green">📁</a>
+        <a href="https://calendar.google.com/calendar" class="green">📅</a>
+        <a href="https://vault.bitwarden.com" class="green">🔒</a>
+    </div>
 
     <!-- ⭐ -->
     <div class="f green top-link">⭐</div>
@@ -290,7 +317,7 @@
 <a href="http://xkcd.com/" class="green">xkcd</a>
 <a href="https://miniature-calendar.com/" class="green">Miniature Calendar</a>
         </div>
-                <div class="sf green">games</div>
+        <div class="sf green">games</div>
         <div class="sfc">
 <a href="https://sudoku.coach/" class="green">Sudoku Coach</a>
 <a href="https://isc.ro/" class="green">ISC</a>
