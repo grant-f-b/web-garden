@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmarks</title>
+    <style>
+        body { background: #000; color: #0f0; font-family: monospace; padding: 20px; font-size: 18px; max-width: 600px; margin: 0 auto; }
+        
+        /* Icon Grid Styles */
+        .icon-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            max-width: 300px;
+            margin: 0 auto 30px;
+            padding: 20px 0;
+        }
+        
+        .icon-grid a {
+            font-size: 3em;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+            border-radius: 10px;
+            transition: transform 0.2s;
+        }
+        
+        .icon-grid a:hover {
+            transform: scale(1.1);
+            text-decoration: none;
+        }
+        
+        /* Folder Styles */
+        .f, .sf { cursor: pointer; user-select: none; margin: 12px 0; font-weight: bold; }
+        .f::before, .sf::before { content: '> '; }
+        .f.open::before, .sf.open::before { content: 'v '; }
+        .fc, .sfc { display: none; padding-left: 20px; }
+        .fc.show, .sfc.show { display: block; }
+        a { color: inherit; text-decoration: none; display: block; margin: 8px 0; }
+        a:hover { text-decoration: underline; }
+        .top-link { font-size: 1.5em; }
+        .cal { font-size: 1.3em; }
+        .hexagon { font-size: 2em; font-weight: bolder; }
+        .star-folder { font-size: 1.5em; }
+        hr { border: 1px solid #333; margin: 15px 0; }
+        .green { color: #0f0; }
+        .pink { color: #f0a; }
+        .cyan { color: #0ff; }
+        .orange { color: #f80; }
+        .magenta { color: #f0f; }
+        .yellow { color: #ff0; }
+        .red { color: #f00; }
+    </style>
+</head>
+<body>
+
+    <!-- Top Icon Grid -->
+    <div class="icon-grid">
+        <a href="https://mail.google.com" class="green">✉️</a>
+        <a href="https://drive.google.com/drive/starred" class="green">📁</a>
+        <a href="https://calendar.google.com/calendar" class="green">📅</a>
+        <a href="https://vault.bitwarden.com" class="green">🔒</a>
+    </div>
+
+    <!-- ⭐ -->
+    <div class="f green top-link">⭐</div>
+    <div class="fc">
+        <a href="https://www.gfbald.win/" class="green">gfbald.win</a>
+        <a href="https://www.icloud.com/" class="green">iCloud</a>
+        <a href="https://onedrive.live.com/?view=1" class="green">OneDrive</a>
+        <a href="https://github.com" class="green">Github</a>
+        <div class="sf green">making</div>
+        <div class="sfc">
+            <a href="https://www.printables.com/" class="green">Printables</a>
+            <a href="https://gobsmacked.io/" class="green">Gobsmacked.io</a>
+        </div>
+    </div>
+
+    <!-- 🔧 -->
+    <div class="f green top-link">🔧</div>
+    <div class="fc">
+        <div class="sf green">search engine</div>
+        <div class="sfc">
+            <a href="https://www.google.com/" class="green">Google</a>
+            <a href="https://www.bing.com/" class="green">Bing</a>
+            <a href="https://www.mojeek.com/" class="green">Mojeek</a>
+            <a href="https://yandex.com/" class="green">Yandex</a>
+            <a href="https://www.ecosia.org/" class="green">Ecosia</a>
+            <a href="https://marginalia-search.com/" class="green">Marginalia Search</a>
+            <a href="https://www.perplexity.ai/" class="green">Perplexity.ai</a>
+        </div>
+        <div class="sf green">LLM</div>
+        <div class="sfc">
+            <a href="https://chat.openai.com/" class="green">ChatGPT</a>
+            <a href="https://gemini.google.com/app" class="green">Gemini</a>
+            <a href="https://copilot.microsoft.com/" class="green">Copilot</a>
+            <a href="https://claude.ai/" class="green">Claude</a>
+            <a href="https://www.deepseek.com/" class="green">Deepseek</a>
+            <a href="https://qwen.ai/home" class="green">Qwen</a>                        
+        </div>
+        <div class="sf green">web tools</div>
+        <div class="sfc">
+            <a href="https://archive.org/" class="green">Internet Archive</a>            
+            <a href="https://archive.is/" class="green">archive.today</a>
+            <a href="https://www.guerrillamail.com/" class="green">Guerrilla Mail</a>
+            <a href="https://incognitomail.co/" class="green">Incgonito Mail</a>
+            <a href="https://mitxela.com/other/colour" class="green">HTML Color Selector</a>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- daily -->
+    <div class="f green">daily</div>
+    <div class="fc">
+        <a href="https://perthirtysix.com/communal-plot-daily-poll" class="green">Communal Daily Plot</a>
+        <a href="https://bracket.city/words/" class="green">Bracket City WOTD</a>
+        <a href="https://apod.nasa.gov/apod/archivepix.html" class="green">NASA APOD</a>
+    </div>
+
+    <!-- news -->
+    <div class="f orange">news</div>
+    <div class="fc">
+        <div class="sf orange">local</div>
+        <div class="sfc">
+<a href="http://bgindependentmedia.org/" class="orange">BG Independent Media</a>
+<a href="https://www.bgohio.gov/" class="orange">BG Ohio Gov</a>
+<a href="https://visitbgohio.org/events-calendar/" class="orange">Visit BG Events</a>
+<a href="https://toledomuseum.org/" class="orange">Toledo Museum</a>
+<a href="https://bgsufalcons.com/calendar" class="orange">BGSU Falcons Calendar</a>
+<a href="https://www.onthestage.tickets/black-swamp-players" class="orange">Black Swamp Players</a>
+<a href="https://www.bgsu.edu/ice-arena/public-skate.html" class="orange">BGSU Ice Arena</a>
+<a href="https://www.bgsu.edu/arts-and-sciences/physics-and-astronomy/bgsu-planetarium.html" class="orange">BGSU Planetarium</a>
+        </div>
+        <div class="sf orange">general</div>
+        <div class="sfc">
+<a href="https://legiblenews.com/" class="orange">Legible News</a>
+<a href="https://walzr.com/papers" class="orange">Walzr Papers</a>
+<a href="https://kite.kagi.com/" class="orange">Kite</a>
+<a href="http://68k.news/" class="orange">68k News</a>
+<a href="https://clone.fyi/" class="orange">Clone</a>
+<a href="https://newsasfacts.com/#" class="orange">News as Facts</a>
+<a href="https://www.newsnow.com/us/" class="orange">NewsNow US</a>
+<a href="http://text.npr.org" class="orange">NPR Text</a>
+<a href="https://lite.cnn.com/" class="orange">CNN Lite</a>
+<a href="https://biztoc.com/light" class="orange">BizToc Light</a>
+        </div>
+        <div class="sf orange">feeds+forums</div>
+        <div class="sfc">
+<a href="https://minifeed.net/welcome" class="orange">Minifeed</a>
+<a href="https://freakpages.org" class="orange">Freakpages</a>
+<a href="https://news.ycombinator.com/" class="orange">Hacker News</a>
+<a href="https://alterslash.org/" class="orange">AlterSlash</a>
+<a href="http://lobste.rs" class="orange">Lobsters</a>
+<a href="https://tildes.net/" class="orange">Tildes</a>
+<a href="https://www.metafilter.com/" class="orange">MetaFilter</a>
+<a href="https://projects.metafilter.com/" class="orange">MetaFilter Projects</a>
+<a href="https://lemmy.world/" class="orange">Lemmy World</a>
+<a href="https://lemmy.dbzer0.com/" class="orange">Lemmy dbzer0</a>
+<a href="https://old.reddit.com/" class="orange">Old Reddit</a>
+        </div>
+        <div class="sf orange">media trends</div>
+        <div class="sfc">
+<a href="https://pageviews.wmcloud.org/" class="orange">Wikipedia Pageviews</a>
+<a href="https://trends.google.com/trends/trendingsearches/realtime" class="orange">Google Trends</a>
+<a href="https://www.boxofficemojo.com/" class="orange">Box Office Mojo</a>
+<a href="https://flixpatrol.com/top10/" class="orange">FlixPatrol</a>
+<a href="https://steamdb.info/" class="orange">SteamDB</a>
+<a href="https://m.imdb.com/trailers/" class="orange">IMDb Trailers</a>
+<a href="https://steampeek.hu/" class="orange">SteamPeek</a>
+<a href="https://boardgamegeek.com/hotness" class="orange">BoardGameGeek Hotness</a>
+        </div>
+        <div class="sf orange">live data</div>
+        <div class="sfc">
+<a href="https://nextrocket.space/" class="orange">Next Rocket</a>
+<a href="https://www.rocketlaunch.live/" class="orange">Rocket Launch Live</a>
+<a href="https://asciimoon.com/" class="orange">ASCII Moon</a>
+<a href="https://earthquake.usgs.gov/earthquakes/map/" class="orange">USGS Earthquakes</a>
+<a href="https://finviz.com/map.ashx?t=sec_all" class="orange">Finviz Market Map</a>
+<a href="https://rate.sx/" class="orange">Rate.sx Crypto</a>
+        </div>
+    </div>
+
+    <!-- weather -->
+    <div class="f cyan">weather</div>
+    <div class="fc">
+        <a href="http://windy.com/" class="cyan">Windy</a>
+        <a href="https://www.spc.noaa.gov/" class="cyan">SPC NOAA</a>
+        <a href="https://battaglia.ddns.net/twc/" class="cyan">TWC</a>
+    </div>
+
+    <!-- sports -->
+    <div class="f pink">sports</div>
+    <div class="fc">
+        <div class="sf pink">scores</div>
+        <div class="sfc">
+<a href="https://plaintextsports.com/" class="pink">Plain Text Sports</a>
+<a href="https://www.thescore.com/" class="pink">The Score</a>
+<a href="https://www.dgpt.com/event-scores/" class="pink">DGPT Scores</a>
+        </div>
+        <div class="sf pink">polls & rankings</div>
+        <div class="sfc">
+<a href="https://rankrly.com/ballot" class="pink">Rankrly</a>
+<a href="https://masseyratings.com/ranks" class="pink">Massey Ratings</a>
+<a href="https://www.colleyrankings.com/rank.html" class="pink">Colley Rankings</a>
+<a href="http://sagarin.com/sports/cfsend.htm" class="pink">Sagarin</a>
+<a href="http://www.dokterentropy.com/colfb.html" class="pink">Dokter Entropy</a>
+<a href="https://slatefluker.com/" class="pink">Slate Fluker</a>
+<a href="https://kenpom.com/" class="pink">KenPom</a>
+<a href="https://barttorvik.com/#" class="pink">Bart Torvik</a>
+<a href="https://evanmiya.com/?homepage" class="pink">Evan Miya</a>
+        </div>
+        <div class="sf pink">stats + data</div>
+        <div class="sfc">
+<a href="https://www.sports-reference.com/" class="pink">Sports Reference</a>
+<a href="http://www.winsipedia.com/" class="pink">Winsipedia</a>
+<a href="https://www.jthomanalytics.com/" class="pink">JThom Analytics</a>
+<a href="https://collegefootballdata.com/" class="pink">College Football Data</a>
+        </div>
+        <div class="sf pink">local sports</div>
+        <div class="sfc">
+<a href="https://www.landgrantholyland.com/" class="pink">Land-Grant Holy Land</a>
+<a href="https://theozone.net/" class="pink">The Ozone</a>
+<a href="http://elevenwarriors.com/" class="pink">Eleven Warriors</a>
+<a href="http://dukebasketballreport.com/" class="pink">Duke Basketball Report</a>
+<a href="https://www.detroitfootball.net/" class="pink">Detroit Football</a>
+<a href="https://www.detroitlionsden.com/" class="pink">Detroit Lions Den</a>
+        </div>
+        <div class="sf pink">sports media</div>
+        <div class="sfc">
+<a href="https://collegefootballhistory.football/" class="pink">College Football History</a>
+        </div>
+    </div>
+
+    <!-- reads -->
+    <div class="f yellow">reads</div>
+    <div class="fc">
+<a href="https://substack.com/home" class="yellow">Substack</a>
+        <div class="sf yellow">blogs</div>
+        <div class="sfc">
+<a href="https://gwern.net/index" class="yellow">Gwern</a>
+<a href="https://simonwillison.net/" class="yellow">Simon Willison</a>
+<a href="https://paulgraham.com/articles.html" class="yellow">Paul Graham</a>
+        </div>
+        <div class="sf yellow">culture</div>
+        <div class="sfc">
+<a href="https://worksinprogress.co" class="yellow">Works in Progress</a>
+<a href="https://publicdomainreview.org/explore" class="yellow">Public Domain Review</a>
+<a href="https://asteriskmag.com/issues" class="yellow">Asterisk</a>
+<a href="https://ironicsans.ghost.io/" class="yellow">Ironic Sans</a>
+<a href="https://booksthatbelongonpaper.substack.com/archive" class="yellow">Books That Belong On Paper</a>
+<a href="https://www.scotusblog.com/" class="yellow">SCOTUSblog</a>
+<a href="https://www.grammarphobia.com/blog" class="yellow">Grammarphobia</a>
+<a href="https://spaceecho.chromewaves.net/" class="yellow">Space Echo</a>
+<a href="https://www.crucialtracks.org/" class="yellow">Crucial Tracks</a>
+<a href="https://museumofscreens.wordpress.com/" class="yellow">Museum of Screens</a>
+<a href="https://centuriesofsound.com/" class="yellow">Centuries of Sound</a>
+<a href="https://syllabusproject.org/" class="yellow">Syllabus Project</a>
+<a href="https://magazine.atavist.com/archive/" class="yellow">Atavist Magazine</a>
+        </div>
+        <div class="sf yellow">tech/science/math</div>
+        <div class="sfc">
+<a href="https://www.quantamagazine.org/" class="yellow">Quanta Magazine</a>
+<a href="https://arstechnica.com/" class="yellow">Ars Technica</a>
+<a href="https://www.theverge.com/" class="yellow">The Verge</a>
+<a href="https://www.wheresyoured.at/" class="yellow">Where's Your Ed At</a>
+<a href="https://usesthis.com/" class="yellow">Uses This</a>
+<a href="https://computer.rip/" class="yellow">Computer Rip</a>
+<a href="https://pudding.cool/" class="yellow">The Pudding</a>
+<a href="https://ourworldindata.org" class="yellow">Our World in Data</a>
+<a href="https://nightingaledvs.com/" class="yellow">Nightingale DVS</a>
+<a href="https://chasmosaurs.com/" class="yellow">Chasmosaurs</a>
+        </div>
+    </div>
+
+    <!-- media -->
+    <div class="f green">media</div>
+    <div class="fc">
+        <div class="sf green">streaming</div>
+        <div class="sfc">
+<a href="https://www.spotify.com/" class="green">Spotify</a>
+<a href="https://www.youtube.com/" class="green">YouTube</a>
+<a href="https://pocketcasts.com/" class="green">Pocket Casts</a>
+<a href="https://bandcamp.com/" class="green">Bandcamp</a>
+<a href="https://www.hoopladigital.com/" class="green">Hoopla</a>
+<a href="https://libbyapp.com/" class="green">Libby</a>
+<a href="https://www.kanopy.com/" class="green">Kanopy</a>
+        </div>
+        <div class="sf green">web radio</div>
+        <div class="sfc">
+<a href="http://radio.garden/visit/toledo-oh/8Pq0oJlt" class="green">Radio Garden Toledo</a>
+<a href="https://www.ldial.org/" class="green">L-Dial</a>
+<a href="https://www.rovr.live/" class="green">Rovr</a>
+<a href="https://thenightlyradio.com/" class="green">The Nightly Radio</a>
+        </div>
+        <div class="sf green">web art & comics</div>
+        <div class="sfc">
+<a href="https://pbfcomics.com/" class="green">PBF Comics</a>
+<a href="https://portsherry.com/" class="green">Port Sherry</a>
+<a href="https://www.smbc-comics.com/index.php" class="green">SMBC</a>
+<a href="https://qwantz.com/" class="green">Dinosaur Comics</a>
+<a href="https://warandpeas.com/" class="green">War and Peas</a>
+<a href="http://xkcd.com/" class="green">xkcd</a>
+<a href="https://miniature-calendar.com/" class="green">Miniature Calendar</a>
+        </div>
+    </div>
+
+    <!-- games -->
+    <div class="f orange">games</div>
+    <div class="fc">
+<a href="https://sudoku.coach/" class="orange">Sudoku Coach</a>
+<a href="https://isc.ro/" class="orange">ISC</a>
+<a href="https://play.pokemonshowdown.com/" class="orange">Pokemon Showdown!</a>
+        <div class="sf orange">daily games</div>
+        <div class="sfc">
+<a href="https://clevergoat.com/" class="orange">Clever Goat</a>
+<a href="https://coffeefirst.games/" class="orange">Coffee First Games</a>
+<a href="https://www.nytimes.com/games/wordle/" class="orange">Wordle</a>
+<a href="https://dodeku.com/" class="orange">Dodeku</a>
+<a href="https://hexcodle.com/" class="orange">Hexcodle</a>
+<a href="https://kickoffleague.com/" class="orange">Kickoff League</a>
+<a href="https://www.word.golf/" class="orange">Word Golf</a>
+<a href="https://gemgetter.clearlysharp.com/" class="orange">Gem Getter</a>
+<a href="https://outlier.land/" class="orange">Outlier</a>
+<a href="https://www.graphs.world/" class="orange">Graphs World</a>
+<a href="https://chartle.cc/" class="orange">Chartle</a>
+        </div>
+    </div>
+
+    <div style="margin-top: 20px; text-align: center;" class="green hexagon">⬡</div>
+
+    <script>
+        document.querySelectorAll('.f').forEach(f => f.onclick = () => { f.classList.toggle('open'); f.nextElementSibling.classList.toggle('show'); });
+        document.querySelectorAll('.sf').forEach(sf => sf.onclick = () => { sf.classList.toggle('open'); sf.nextElementSibling.classList.toggle('show'); });
+    </script>
+</body>
+</html>
