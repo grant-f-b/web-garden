@@ -6,30 +6,7 @@
     <title>Bookmarks</title>
     <style>
         body { background: #000; color: #0f0; font-family: monospace; padding: 20px; font-size: 18px; max-width: 600px; margin: 0 auto; }
-        
-        /* Icon Grid Styles */
-        .icon-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 12px;
-            max-width: 200px;
-            margin: 0 auto 20px;
-            padding: 10px 0;
-        }
-        
-        .icon-grid a {
-            font-size: 2em;
-            text-align: center;
-            margin: 0;
-            padding: 10px;
-            border-radius: 8px;
-            transition: transform 0.2s;
-        }
-        
-        .icon-grid a:hover {
-            transform: scale(1.1);
-            text-decoration: none;
-        }
+    
         
         /* Folder Styles */
         .f, .sf { cursor: pointer; user-select: none; margin: 12px 0; font-weight: bold; }
@@ -55,20 +32,10 @@
 </head>
 <body>
 
-    <!-- Top Icon Grid -->
-    <div class="icon-grid">
-        <a href="https://mail.google.com" class="green">✉️</a>
-        <a href="https://drive.google.com/drive/starred" class="green">📁</a>
-        <a href="https://calendar.google.com/calendar" class="green">📅</a>
-        <a href="https://vault.bitwarden.com" class="green">🔒</a>
-    </div>
-
     <!-- ⭐ -->
     <div class="f green top-link">⭐</div>
     <div class="fc">
         <a href="https://www.gfbald.win/" class="green">gfbald.win</a>
-        <a href="https://www.icloud.com/" class="green">iCloud</a>
-        <a href="https://onedrive.live.com/?view=1" class="green">OneDrive</a>
         <div class="sf green">making</div>
         <div class="sfc">
             <a href="https://github.com" class="green">Github</a>            
@@ -117,6 +84,20 @@
         <a href="https://perthirtysix.com/communal-plot-daily-poll" class="green">Communal Daily Plot</a>
         <a href="https://bracket.city/words/" class="green">Bracket City WOTD</a>
         <a href="https://apod.nasa.gov/apod/archivepix.html" class="green">NASA APOD</a>
+                <div class="sf green">daily games</div>
+        <div class="sfc">
+<a href="https://clevergoat.com/" class="green">Clever Goat</a>
+<a href="https://coffeefirst.games/" class="green">Coffee First Games</a>
+<a href="https://www.nytimes.com/games/wordle/" class="green">Wordle</a>
+<a href="https://dodeku.com/" class="green">Dodeku</a>
+<a href="https://hexcodle.com/" class="green">Hexcodle</a>
+<a href="https://kickoffleague.com/" class="green">Kickoff League</a>
+<a href="https://www.word.golf/" class="green">Word Golf</a>
+<a href="https://gemgetter.clearlysharp.com/" class="green">Gem Getter</a>
+<a href="https://outlier.land/" class="green">Outlier</a>
+<a href="https://www.graphs.world/" class="green">Graphs World</a>
+<a href="https://chartle.cc/" class="green">Chartle</a>
+        </div>
     </div>
 
     <!-- news -->
@@ -236,7 +217,6 @@
     <!-- reads -->
     <div class="f yellow">reads</div>
     <div class="fc">
-<a href="https://substack.com/home" class="yellow">Substack</a>
         <div class="sf yellow">blogs</div>
         <div class="sfc">
 <a href="https://gwern.net/index" class="yellow">Gwern</a>
@@ -279,11 +259,7 @@
     <div class="fc">
         <div class="sf green">streaming</div>
         <div class="sfc">
-<a href="https://www.spotify.com/" class="green">Spotify</a>
-<a href="https://www.youtube.com/" class="green">YouTube</a>
-<a href="https://pocketcasts.com/" class="green">Pocket Casts</a>
 <a href="https://bandcamp.com/" class="green">Bandcamp</a>
-<a href="https://www.hoopladigital.com/" class="green">Hoopla</a>
 <a href="https://libbyapp.com/" class="green">Libby</a>
 <a href="https://www.kanopy.com/" class="green">Kanopy</a>
         </div>
@@ -304,27 +280,11 @@
 <a href="http://xkcd.com/" class="green">xkcd</a>
 <a href="https://miniature-calendar.com/" class="green">Miniature Calendar</a>
         </div>
-    </div>
-
-    <!-- games -->
-    <div class="f orange">games</div>
-    <div class="fc">
-<a href="https://sudoku.coach/" class="orange">Sudoku Coach</a>
-<a href="https://isc.ro/" class="orange">ISC</a>
-<a href="https://play.pokemonshowdown.com/" class="orange">Pokemon Showdown!</a>
-        <div class="sf orange">daily games</div>
+                <div class="sf green">games</div>
         <div class="sfc">
-<a href="https://clevergoat.com/" class="orange">Clever Goat</a>
-<a href="https://coffeefirst.games/" class="orange">Coffee First Games</a>
-<a href="https://www.nytimes.com/games/wordle/" class="orange">Wordle</a>
-<a href="https://dodeku.com/" class="orange">Dodeku</a>
-<a href="https://hexcodle.com/" class="orange">Hexcodle</a>
-<a href="https://kickoffleague.com/" class="orange">Kickoff League</a>
-<a href="https://www.word.golf/" class="orange">Word Golf</a>
-<a href="https://gemgetter.clearlysharp.com/" class="orange">Gem Getter</a>
-<a href="https://outlier.land/" class="orange">Outlier</a>
-<a href="https://www.graphs.world/" class="orange">Graphs World</a>
-<a href="https://chartle.cc/" class="orange">Chartle</a>
+<a href="https://sudoku.coach/" class="green">Sudoku Coach</a>
+<a href="https://isc.ro/" class="green">ISC</a>
+<a href="https://play.pokemonshowdown.com/" class="green">Pokemon Showdown!</a>
         </div>
     </div>
 
