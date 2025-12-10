@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bookmarks</title>
     <style>
-        body { background: #000; color: #0f0; font-family: monospace; padding: 20px; font-size: 18px; max-width: 600px; margin: 0 auto; }
+        body { background: #000; color: #0f0; font-family: monospace; padding: 20px; font-size: 18px; max-width: 600px; margin: 0 auto; transition: background 0.3s, color 0.3s; }
+        body.light { background: #fff; color: #060; }
         
         /* Icon Grid Styles */
         .icon-grid {
@@ -43,6 +44,8 @@
         .hexagon { font-size: 2em; font-weight: bolder; }
         .star-folder { font-size: 1.5em; }
         hr { border: 1px solid #333; margin: 15px 0; }
+        body.light hr { border-color: #ccc; }
+        
         .green { color: #0f0; }
         .pink { color: #f0a; }
         .cyan { color: #0ff; }
@@ -50,6 +53,35 @@
         .magenta { color: #f0f; }
         .yellow { color: #ff0; }
         .red { color: #f00; }
+        
+        body.light .green { color: #060; }
+        body.light .pink { color: #c08; }
+        body.light .cyan { color: #088; }
+        body.light .orange { color: #c60; }
+        body.light .magenta { color: #c0c; }
+        body.light .yellow { color: #990; }
+        body.light .red { color: #c00; }
+        
+        /* Light Switch */
+        .light-switch {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            text-align: center;
+            font-size: 12px;
+            line-height: 1.3;
+        }
+        .light-switch .label {
+            opacity: 0.5;
+        }
+        .light-switch .switch {
+            cursor: pointer;
+            font-size: 16px;
+            padding: 0 4px;
+        }
+        .light-switch .switch:hover {
+            opacity: 0.7;
+        }
     </style>
 </head>
 <body>
@@ -391,9 +423,22 @@
 
     <div style="margin-top: 20px; text-align: center;" class="green hexagon">⬡</div>
 
+    <!-- Light Switch -->
+    <div class="light-switch">
+        <div class="label">on</div>
+        <div class="switch">∧</div>
+        <div class="label">off</div>
+    </div>
+
     <script>
         document.querySelectorAll('.f').forEach(f => f.onclick = () => { f.classList.toggle('open'); f.nextElementSibling.classList.toggle('show'); });
         document.querySelectorAll('.sf').forEach(sf => sf.onclick = () => { sf.classList.toggle('open'); sf.nextElementSibling.classList.toggle('show'); });
+        
+        // Light switch toggle
+        document.querySelector('.light-switch .switch').onclick = function() {
+            document.body.classList.toggle('light');
+            this.textContent = document.body.classList.contains('light') ? '∨' : '∧';
+        };
     </script>
 </body>
 </html>
