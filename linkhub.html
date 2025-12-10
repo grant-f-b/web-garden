@@ -426,7 +426,7 @@
     <!-- Light Switch -->
     <div class="light-switch">
         <div class="label">on</div>
-        <div class="switch">∧</div>
+        <div class="switch">∨</div>
         <div class="label">off</div>
     </div>
 
@@ -437,7 +437,7 @@
         // Light switch toggle
         document.querySelector('.light-switch .switch').onclick = function() {
             document.body.classList.toggle('light');
-            this.textContent = document.body.classList.contains('light') ? '∨' : '∧';
+            this.textContent = document.body.classList.contains('light') ? '∧' : '∨';
         };
     </script>
 </body>
