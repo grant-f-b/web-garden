@@ -54,10 +54,21 @@
         }
         
         .sidebar {
+            width: 180px;
+            border-right: 1px solid #0f0;
             padding: 15px 10px;
+            position: fixed;
+            top: 61px;
+            left: 0;
+            height: calc(100vh - 61px);
+            overflow-y: auto;
+            background: #000;
         }
         
-        body.light .sidebar { border-right-color: #060; }
+        body.light .sidebar { 
+            border-right-color: #060;
+            background: #fff;
+        }
         
         .nav-item {
             padding: 8px 10px;
@@ -75,6 +86,7 @@
             flex: 1;
             padding: 20px;
             max-width: 1200px;
+            margin-left: 180px;
         }
         
         .section { display: none; }
@@ -143,7 +155,11 @@
             .nav-container { flex-direction: column; }
             
             .sidebar {
+                position: relative;
                 width: 100%;
+                top: 0;
+                left: 0;
+                height: auto;
                 border-right: none;
                 border-bottom: 1px solid #0f0;
                 display: flex;
@@ -161,7 +177,10 @@
             
             .nav-item.active { border-bottom-color: currentColor; }
             
-            .content { padding: 15px; }
+            .content { 
+                padding: 15px;
+                margin-left: 0;
+            }
             .link-grid { grid-template-columns: 1fr; }
         }
     </style>
@@ -550,7 +569,7 @@
 
     <div class="light-switch">
         <div class="label">on</div>
-        <div class="switch">∧</div>
+        <div class="switch">∨</div>
         <div class="label">off</div>
     </div>
 
