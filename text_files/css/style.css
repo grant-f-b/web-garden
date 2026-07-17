@@ -23,7 +23,6 @@
   justify-content: center; /* Center vertically */
   padding: 10px;
   border: 1px solid #000000; /* Optional border */
-  border-radius: 5px; /* Optional rounded corners */
 }
 .color-preview {
   width: 100%;
