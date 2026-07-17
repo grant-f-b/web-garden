@@ -29,8 +29,6 @@
   height: 100px; /* Adjust height as needed */
   margin-bottom: 10px;
   border: 1px solid #000000;
-  border-radius: 5px; /* Optional rounded corners */
-
 }
 .hex-code {
   font-size: 1.2em;
