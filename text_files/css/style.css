@@ -21,14 +21,14 @@
   flex-direction: column;
   align-items: center; /* Center horizontally */
   justify-content: center; /* Center vertically */
-  padding: 5px;
+  padding: 10px;
   border: 1px solid #000000; /* Optional border */
 }
 .color-preview {
   width: 100%;
   height: 100px; /* Adjust height as needed */
   margin-bottom: 10px;
-  border: 1px solid #000000;
+  border: 3px solid #000000;
 }
 .hex-code {
   font-size: 1.2em;
