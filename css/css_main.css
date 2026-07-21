@@ -248,19 +248,25 @@ td {
    8. EXPANDABLE / COLLAPSIBLE TABLE (checkbox + label trick)
    Used on PBQR pages to show/hide the long ratings table.
    Scoped to .toggle-checkbox (NOT a bare "input" selector) so this doesn't
-   accidentally hide unrelated <input> elements on other pages, like the
-   volume/scrub sliders on the sounds page.
+   accidentally hide unrelated <input> elements on other pages.
    ------------------------------------------------------------------------- */
 .toggle-checkbox {
   display: none; /* hides the checkbox itself */
 }
-.toggle-checkbox:checked + div {
-  height: auto; /* expands the table when checkbox is checked */
+
+/* Default collapsed state: height calculated for header + top 25 rows (~736px) */
+.ratings-div {
+  max-height: calc(28.3px * (25 + 1));
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
 }
-.toggle-checkbox:checked ~ label {
-  transform: rotate(180deg); /* flips the arrow label */
-  margin-top: 0;
+
+/* Expanded state: displays all table rows */
+.toggle-checkbox:checked ~ .ratings-div {
+  max-height: 5000px; /* high threshold to fit full table */
 }
+
+/* Label styling with no animation transitions */
 label {
   display: block;
   font-size: x-large;
@@ -271,9 +277,10 @@ label {
   height: 38px;
   background: linear-gradient(to bottom, var(--brand-yellow) 0%, var(--brand-green) 100%);
 }
-.ratings-div {
-  height: calc(28.3px * (25 + 1));
-  overflow: hidden;
+
+/* Instantly flips arrows upward when table expands */
+.toggle-checkbox:checked ~ label {
+  transform: rotate(180deg);
 }
 
 
