@@ -1,0 +1,347 @@
+/* =========================================================================
+   G.F.B. SITE STYLESHEET
+   -------------------------------------------------------------------------
+   Every page should now link to ONLY this one file:
+     <link rel="stylesheet" href="css/main.css">      (pages in the root)
+     <link rel="stylesheet" href="../css/main.css">   (pages one folder deep)
+
+   To update ANY other page on the site to match:
+     1. Delete its <link> tags for reset.css / style.css / style2.css
+     2. Add a single <link rel="stylesheet" href="css/main.css"> (adjust the
+        "../" path depending on how deep the page lives in your folders)
+     3. Nothing else needs to change - all class names below are unchanged.
+   ========================================================================= */
+
+
+/* -------------------------------------------------------------------------
+   1. RESET (pasted from reset.css - Eric Meyer's reset, public domain)
+   Strips default browser spacing/styling so every browser starts the same.
+   You generally never need to edit this section.
+   ------------------------------------------------------------------------- */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ul, ol {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/* -------------------------------------------------------------------------
+   2. SITE-WIDE VARIABLES
+   Change a value here and it updates everywhere it's used.
+   ------------------------------------------------------------------------- */
+:root {
+  --header-1: 2.5rem;
+  --header-2: 2rem;
+  --header-3: 1.5rem;
+  --text: 1.1rem;
+  --text-line-height: 1.2rem;
+  --border: 1px solid #000000;
+  --brand-green: #9acd32;   /* header/footer background + accents */
+  --brand-yellow: #fffcbd;  /* page background */
+  --brand-purple: #a50AE6;  /* link color used across pages */
+  /* The width of all content on the site */
+  --content-width: 800px;
+}
+
+
+/* -------------------------------------------------------------------------
+   3. TYPOGRAPHY
+   ------------------------------------------------------------------------- */
+h1 { font-size: var(--header-1); }
+h2 { font-size: var(--header-2); }
+h3 { font-size: var(--header-3); }
+
+p {
+  font-size: var(--text);
+  line-height: var(--text-line-height);
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+/* links */
+a {
+  font-size: var(--text);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+/* text-selection color */
+::selection {
+  background: #FF8000;
+}
+
+
+/* -------------------------------------------------------------------------
+   4. LAYOUT / PAGE BODY
+   ------------------------------------------------------------------------- */
+body {
+  font-family: monospace;
+  padding: 1rem;
+  max-width: var(--content-width);
+  margin-left: auto;
+  margin-right: auto;
+  background-color: var(--brand-yellow);
+  color: #000000;
+}
+
+/* generic subsection spacing helpers, used here and there in page markup */
+.one {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  margin-left: 1em;
+}
+.two {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  margin-left: 3em;
+}
+.mid {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  text-align: center;
+}
+
+
+/* -------------------------------------------------------------------------
+   5. HEADER / FOOTER
+   ------------------------------------------------------------------------- */
+header {
+  align-items: center;
+  text-align: center;
+  flex-direction: row;
+  margin-bottom: 1.2rem;
+  background: var(--brand-green);
+}
+header a {
+  margin-right: 0em;
+  margin-left: .6em;
+}
+
+footer {
+  align-items: center;
+  text-align: center;
+  flex-direction: row;
+  margin-bottom: 1.2rem;
+  background: var(--brand-green);
+}
+.gfbfooter:hover {
+  color: var(--brand-yellow);
+}
+
+/* STICKY HEADER
+   Requires the header to be wrapped like this in the HTML, with the
+   matching bottom-of-page script that toggles the "sticky" class:
+     <div id="h2"><header> ... </header></div>
+*/
+.sticky {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;             /* keeps the header above everything else once it's stuck */
+  background: var(--brand-green);  /* belt-and-suspenders: guarantees no gaps show through */
+}
+.sticky + .content {
+  padding-top: 102px;
+}
+
+
+/* -------------------------------------------------------------------------
+   6. TABLES (general)
+   ------------------------------------------------------------------------- */
+table {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  margin-left: 0.15rem;
+  margin-right: 0.15rem;
+}
+tr, th, td {
+  border: var(--border);
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  padding-left: 0.15rem;
+  padding-right: 0.15rem;
+  font-size: var(--text);
+  line-height: var(--text-line-height);
+}
+td {
+  min-width: auto;
+}
+
+
+/* -------------------------------------------------------------------------
+   7. RATINGS TABLES (used on PBQR pages, was style2.css)
+   ------------------------------------------------------------------------- */
+.rating {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  max-width: var(--content-width);
+}
+.rating-head {
+  font-weight: bold;
+}
+.rating td {
+  min-width: auto;
+}
+
+.yearlinks {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.rules {
+  border: 1px solid black;
+  width: fit-content;
+  overflow: hidden;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+
+/* -------------------------------------------------------------------------
+   8. EXPANDABLE / COLLAPSIBLE TABLE (checkbox + label trick)
+   Used on PBQR pages to show/hide the long ratings table.
+   Scoped to .toggle-checkbox (NOT a bare "input" selector) so this doesn't
+   accidentally hide unrelated <input> elements on other pages, like the
+   volume/scrub sliders on the sounds page.
+   ------------------------------------------------------------------------- */
+.toggle-checkbox {
+  display: none; /* hides the checkbox itself */
+}
+.toggle-checkbox:checked + div {
+  height: auto; /* expands the table when checkbox is checked */
+}
+.toggle-checkbox:checked ~ label {
+  transform: rotate(180deg); /* flips the arrow label */
+  margin-top: 0;
+}
+label {
+  display: block;
+  font-size: x-large;
+  text-align: center;
+  user-select: none;
+  cursor: pointer;
+  margin-top: 10px;
+  height: 38px;
+  background: linear-gradient(to bottom, var(--brand-yellow) 0%, var(--brand-green) 100%);
+}
+.ratings-div {
+  height: calc(28.3px * (25 + 1));
+  overflow: hidden;
+}
+
+
+/* -------------------------------------------------------------------------
+   9. SITE DIRECTORY TREE (collapsible nested list on the homepage)
+   ------------------------------------------------------------------------- */
+.tree ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.tree li {
+  cursor: pointer;
+  position: relative;
+}
+.tree li ul {
+  display: none;
+  margin-left: 20px;
+}
+.tree li.active > ul {
+  display: block;
+}
+.tree li span {
+  margin-right: 5px;
+}
+.tree li span::before {
+  content: "╠═"; /* T-junction */
+  margin-right: 5px;
+}
+.tree li.active > span::before {
+  content: "╚═"; /* L-junction */
+}
+.tree li:last-child > span::before {
+  content: "╚═"; /* corner for last item */
+}
+
+
+/* -------------------------------------------------------------------------
+   10. LIST BULLETS
+   Reset above removes native bullets. Add class="bulleted" to a <ul>/<ol>
+   where you actually want dot bullets (e.g. the PBQR rules list) - this is
+   opt-in on purpose so it doesn't add stray dots to every list on every
+   page (it used to be a bare "li" selector and was leaking onto lists,
+   like the homepage site-tree, that never wanted bullets).
+   ------------------------------------------------------------------------- */
+.bulleted li::before {
+  content: "•";
+  padding-right: 8px;
+  color: var(--brand-green);
+}
+
+
+/* -------------------------------------------------------------------------
+   11. MOBILE
+   Content already scales via --content-width + max-width:100% body padding,
+   but this tightens things up on small screens so nothing overflows.
+   ------------------------------------------------------------------------- */
+@media (max-width: 600px) {
+  body {
+    padding: 0.5rem;
+  }
+  :root {
+    --header-1: 2rem;
+    --header-2: 1.6rem;
+    --header-3: 1.25rem;
+  }
+  .rules ul {
+    margin-left: 5% !important;
+    margin-right: 5% !important;
+  }
+}

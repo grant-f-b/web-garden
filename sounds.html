@@ -1,470 +1,885 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 	<head>
+
         <!-- basic meta data -->
+
         <title>sounds</title>
+
         <meta name="description" content="sounds">
+
         <meta name="author" content="grant">
+
         <!-- standards -->
+
         <meta charset="utf-8">
+
         <meta name="viewport" content="width=device-width, initial-scale=1">
+
         <!-- favicon -->
+
         <link rel="apple-touch-icon" sizes="180x180" href="favicon_files/apple-touch-icon.png">
+
         <link rel="icon" type="image/png" sizes="32x32" href="favicon_files/favicon-32x32.png">
+
         <link rel="icon" type="image/png" sizes="16x16" href="favicon_files/favicon-16x16.png">
+
         <!-- OG social card data -->
+
         <meta property="og:title" content="sounds">
+
         <meta property="og:type" content="website">
-        <meta property="og:url" content="https://">
+
+        <meta property="og:url" content="https://www.gfbald.win/sounds.html">
+
         <meta property="og:description" content="sounds">
-        <meta property="og:image" content="/!/image.png/!/">
-        <!-- CSS & other links -->
-        <link rel="stylesheet" href="css/reset.css">
-        <link rel="stylesheet" type="text/css" href="css/style.css">
-        <link rel="manifest" href="css/site.webmanifest">
+
+        <!-- CSS -->
+
+        <link rel="stylesheet" type="text/css" href="css/css_main.css">
+
         <style>
-            /* ... (Previous CSS styles) ... */
+
+            /* page-specific styling for the volume/scrub sliders on the audio players below */
+
             .slider-container {
-              width: 200px; /* Adjust as needed */
+
+              width: 200px;
+
               margin-top: 5px;
+
             }
+
             .slider {
-              -webkit-appearance: none; /* Customize the slider */
-              width: 100%;
-              height: 5px;
-              background: #ddd;
-              outline: none;
-              opacity: 0.7;
-              -webkit-transition: .2s;
-              transition: opacity .2s;
-              cursor: pointer;
-            }
-          
-            .slider::-webkit-slider-thumb {
+
               -webkit-appearance: none;
+
+              width: 100%;
+
+              height: 5px;
+
+              background: #ddd;
+
+              outline: none;
+
+              opacity: 0.7;
+
+              -webkit-transition: .2s;
+
+              transition: opacity .2s;
+
+              cursor: pointer;
+
+            }
+
+          
+
+            .slider::-webkit-slider-thumb {
+
+              -webkit-appearance: none;
+
               appearance: none;
+
               width: 15px;
+
               height: 15px;
+
               border-radius: 50%;
-              background: #4CAF50; /* Or any color you like */
-              cursor: pointer;
-            }
-          
-            .slider::-moz-range-thumb {
-              width: 15px;
-              height: 15px;
-              border-radius: 50%;
+
               background: #4CAF50;
+
               cursor: pointer;
+
             }
+
           
+
+            .slider::-moz-range-thumb {
+
+              width: 15px;
+
+              height: 15px;
+
+              border-radius: 50%;
+
+              background: #4CAF50;
+
+              cursor: pointer;
+
+            }
+
+
+
+            /* number each track 1, 2, 3... and restart the count at each
+
+               section heading (h4), instead of the default bullet dot */
+
+            #playlist { counter-reset: track; }
+
+            #playlist h4 { counter-reset: track; }
+
+            #playlist li { counter-increment: track; }
+
+            #playlist li::before {
+
+              content: counter(track) ". ";
+
+              font-weight: bold;
+
+              color: #9acd32;
+
+              padding-right: 4px;
+
+            }
+
           </style>
-        <!-- maybe move this to bottom of body -->
-        <script type="module" src="https://md-block.verou.me/md-block.js"></script>
+
 	</head>
 
+
+
 <body>
+
     <!-- header -->
+
     <div class="h1" id="h2">
+
     <header>    
+
         <br>
+
         <h3>⎔ ♫ ⎔</h3> 
+
         <a style="color: black; font-weight:bold" href="projects.html">things</a>
+
         <a style="color: black; font-weight:bold" href="index.html">~𝖌𝖋𝖇~</a>
+
         <a style="color: black; font-weight:bold" href="posts.html">writing</a>
+
         <br><br>
+
     </header></div>
 
+
+
     <!-- content -->
+
     <!-- italic title: style="font-style:italic;" -->
 
+
+
     <h1 style="text-align: center;"><u>sounds</u></h1>
+
     <br>
+
     <p style="text-align: center;">
+
     ☙
+
     ❦
+
     ❧
+
     𐡷
+
     𐡸
+
     𐫱
 
+
+
     </p>
+
 <br>
+
     <!-- music lists -->
+
 <!-- early juice co -->
+
     <ul id="playlist">
+
 <h2 style="font-weight:bold;">the juice company</h2>
+
 <br>
+
+
 
 <h4 style="font-weight:bold; text-indent: 3rem;">random stuff</h4>
+
       <li>
+
         <span>coffee</span>
+
         <div class="slider-container">
+
             <input type="range" min="0" max="100" value="0" class="slider" data-track="audio1">
+
           </div>
+
         <button class="playButton" data-track="audio1">Play</button>
+
         <audio id="audio1" src="attachments/sounds/coffee..m4a"></audio> 
 
+
+
     </li>
+
     <br>
+
       <li>
+
         <span>silent night</span>
+
         <div class="slider-container">
+
             <input type="range" min="0" max="100" value="0" class="slider" data-track="audio1">
+
           </div>
+
         <button class="playButton" data-track="audio2">Play</button>
+
         <audio id="audio2" src="attachments/sounds/silent night.m4a"></audio>
 
+
+
       </li>
+
       <br>
+
       <li>
+
         <span>parking lot</span>
+
         <div class="slider-container">
+
             <input type="range" min="0" max="100" value="0" class="slider" data-track="audio1">
+
           </div>
+
         <button class="playButton" data-track="audio3">Play</button>
+
         <audio id="audio3" src="attachments/sounds/parklot.m4a"></audio>
 
+
+
       </li>
 
+
+
 <br><br>
+
+
 
  <!-- byd juice co --> 
+
  <h4 style="font-weight:bold; text-indent: 3rem;">bet your debt</h4>
+
  <img style=" padding-top: 0rem; display: block;margin-left: 1rem; margin-right: auto;"  src="attachments/site_imgs/betyerdebt.jpg" alt="G" height="200" width="200">
 
+
+
       <li>
+
         <span>snake</span>
+
         <div class="slider-container">
+
             <input type="range" min="0" max="100" value="0" class="slider" data-track="audio1">
+
           </div>
+
         <button class="playButton" data-track="audio4">Play</button>
+
         <audio id="audio4" src="attachments/sounds/Snake.m4a"></audio> 
+
     </li>
+
     <br>
+
       <li>
+
         <span>bittersweet</span>
+
         <div class="slider-container">
+
             <input type="range" min="0" max="100" value="0" class="slider" data-track="audio1">
+
           </div>
+
         <button class="playButton" data-track="audio5">Play</button>
+
         <audio id="audio5" src="attachments/sounds/Bittersweet.m4a"></audio>
+
       </li>
+
       <br>
+
       <li>
+
         <span>itchy eyes</span>
+
         <div class="slider-container">
+
             <input type="range" min="0" max="100" value="0" class="slider" data-track="audio1">
+
           </div>
+
         <button class="playButton" data-track="audio6">Play</button>
+
         <audio id="audio6" src="attachments/sounds/Itchy Eyes-1.m4a"></audio>
+
     
+
       </li>
+
       <br>
+
       <li>
+
         <span>evil.</span>
+
         <div class="slider-container">
+
             <input type="range" min="0" max="100" value="0" class="slider" data-track="audio1">
+
           </div>
+
         <button class="playButton" data-track="audio7">Play</button>
+
         <audio id="audio7" src="attachments/sounds/Evil.m4a"></audio>
+
       </li>
+
       <br>
+
       <li>
+
         <span>coffee</span>
+
         <div class="slider-container">
+
             <input type="range" min="0" max="100" value="0" class="slider" data-track="audio1">
+
           </div>
+
         <button class="playButton" data-track="audio8">Play</button>
+
         <audio id="audio8" src="attachments/sounds/Coffee.m4a"></audio>
+
       </li><br>
+
       <li>
+
         <span>bet you always</span>
+
         <div class="slider-container">
+
             <input type="range" min="0" max="100" value="0" class="slider" data-track="audio1">
+
           </div>
+
         <button class="playButton" data-track="audio9">Play</button>
+
         <audio id="audio9" src="attachments/sounds/Bet You Always.m4a"></audio>
 
+
+
       </li>
 
+
+
 <!-- red and itchy juice co -->
+
 <br><br>
+
+
 
 <h4 style="font-weight:bold; text-indent: 3rem;">red & itchy</h4>
+
 <img style=" padding-top: 0rem; display: block;margin-left: 1rem; margin-right: auto;"  src="attachments/site_imgs/redanditch.jpg" alt="G" height="200" width="200">
 
+
+
     <li>
+
       <span>red foreman</span>
+
       <div class="slider-container">
+
         <input type="range" min="0" max="100" value="0" class="slider" data-track="audio1">
+
       </div>
+
       <button class="playButton" data-track="audio10">Play</button>
+
       <audio id="audio10" src="attachments/sounds/TJC-Red Final Master.m4a"></audio> 
+
   
+
     </li><br>
+
     <li>
+
       <span>itchy eyes</span>
+
       <div class="slider-container">
+
         <input type="range" min="0" max="100" value="0" class="slider" data-track="audio1">
+
       </div>
+
       <button class="playButton" data-track="audio11">Play</button>
+
       <audio id="audio11" src="attachments/sounds/TJC-Itchy Eyes Final Master.m4a"></audio>
 
+
+
     </li>
+
     
 
+
+
     <!-- fruit theory juice co -->
+
     <br><br>
+
         <h4 style="font-weight:bold; text-indent: 3rem;">fruit theory</h4>
+
     <img style=" padding-top: 0rem; display: block;margin-left: 1rem; margin-right: auto;"  src="attachments/site_imgs/fruittheory.jpg" alt="G" height="200" width="200">
 
+
+
         <li>
+
           <span>dying</span>
+
           <div class="slider-container">
+
             <input type="range" min="0" max="100" value="0" class="slider" data-track="audio1">
+
           </div>
+
           <button class="playButton" data-track="audio12">Play</button>
+
           <audio id="audio12" src="attachments/sounds/JC - Dying Master 1.m4a"></audio> 
 
+
+
         </li><br>
+
         <li>
+
           <span>long live jerry</span>
+
           <div class="slider-container">
+
             <input type="range" min="0" max="100" value="0" class="slider" data-track="audio1">
+
           </div>
+
           <button class="playButton" data-track="audio13">Play</button>
+
           <audio id="audio13" src="attachments/sounds/JC - Jerry Master 2.m4a"></audio>
 
+
+
         </li><br>
+
         <li>
+
           <span>january</span>
+
           <div class="slider-container">
+
             <input type="range" min="0" max="100" value="0" class="slider" data-track="audio1">
+
           </div>
+
           <button class="playButton" data-track="audio14">Play</button>
+
           <audio id="audio14" src="attachments/sounds/JC - January Master 2.m4a"></audio>
+
         </li>
+
         
 
+
+
 <!-- no more fish juice co -->
+
 <br><br>
 
+
+
 <h4 style="font-weight:bold; text-indent: 3rem;">no more fish</h4>
+
 <img style=" padding-top: 0rem; display: block;margin-left: 1rem; margin-right: auto;"  src="attachments/site_imgs/nomorefish.jpg" alt="G" height="200" width="200">
 
+
+
     <li>
+
       <span>lucid dreams</span>
+
       <div class="slider-container">
+
         <input type="range" min="0" max="100" value="0" class="slider" data-track="audio1">
+
       </div>
+
       <button class="playButton" data-track="audio15">Play</button>
+
       <audio id="audio15" src="attachments/sounds/Juice Co - Ludic Dream Master 1.wav"></audio> 
 
+
+
     </li><br>
+
     <li>
+
       <span>just make you sad</span>
+
       <div class="slider-container">
+
         <input type="range" min="0" max="100" value="0" class="slider" data-track="audio1">
+
       </div>
+
       <button class="playButton" data-track="audio16">Play</button>
+
       <audio id="audio16" src="attachments/sounds/Juice Co - Just Make You Sad Master 1.wav"></audio>
 
+
+
     </li>
+
    
+
     <!-- gfb -->
 
+
+
     <br>
+
+
 
     <h2 style="font-weight:bold;">grant</h2>
+
     <br>
 
+
+
     <h4 style="font-weight:bold">a mix of old guitar and midi tracks</h4>
+
     <li>
+
         <span>january</span>
+
         <div class="slider-container">
+
             <input type="range" min="0" max="100" value="0" class="slider" data-track="audio1">
+
           </div>
+
         <button class="playButton" data-track="audio17">Play</button>
+
         <audio id="audio17" src="attachments/sounds/january 2.m4a"></audio>
 
+
+
       </li><br>
+
       <li>
+
         <span>winona</span>
+
         <div class="slider-container">
+
             <input type="range" min="0" max="100" value="0" class="slider" data-track="audio1">
+
           </div>
+
         <button class="playButton" data-track="audio18">Play</button>
+
         <audio id="audio18" src="attachments/sounds/johnny deppression.m4a"></audio>
 
+
+
       </li><br>
+
     <li>
+
         <span>ww</span>
+
         <div class="slider-container">
+
             <input type="range" min="0" max="100" value="0" class="slider" data-track="audio1">
+
           </div>
+
         <button class="playButton" data-track="audio19">Play</button>
+
         <audio id="audio19" src="attachments/sounds/ww.m4a"></audio>
+
       </li><br>
+
     <li>
+
       <span>midi track</span>
+
       <div class="slider-container">
+
         <input type="range" min="0" max="100" value="0" class="slider" data-track="audio1">
+
       </div>
+
       <button class="playButton" data-track="audio20">Play</button>
+
       <audio id="audio20" src="attachments/sounds/gbFinalmp3.mp3"></audio>
 
+
+
     </li>
+
+
+
 
 
 <!-- other -->
+
 <br>
+
+
 
 <h2 style="font-weight:bold;">other stuff</h2>
+
 <br>
+
 <h4 style="font-weight:bold;">roots music club collaborations</h4>
+
 <img style=" padding-top: 0rem; display: block;margin-left: 1rem; margin-right: auto;"  src="attachments/site_imgs/rootsmc.jpg" alt="G" height="200" width="200">
 
+
+
     <li>
+
       <span>cherry street sinners</span>
+
       <div class="slider-container">
+
         <input type="range" min="0" max="100" value="0" class="slider" data-track="audio1">
+
       </div>
+
       <button class="playButton" data-track="audio21">Play</button>
+
       <audio id="audio21" src="attachments/sounds/Cherry Street Sinners Mix 2.mp3"></audio> 
 
+
+
     </li><br>
+
     <li>
+
       <span>music man</span>
+
       <div class="slider-container">
+
         <input type="range" min="0" max="100" value="0" class="slider" data-track="audio1">
+
       </div>
+
       <button class="playButton" data-track="audio22">Play</button>
+
       <audio id="audio22" src="attachments/sounds/Music Man Mix 1.mp3"></audio>
 
+
+
     </li>
+
     <br>
+
+
+
 
 
     </ul>
 
-      <!-- audio player stuff -->
-    <script>
-      const playlist = document.getElementById('playlist');
-      const playButtons = playlist.querySelectorAll('.playButton');
-    
-      playButtons.forEach(button => {
-        const audioId = button.dataset.track;
-        const audio = document.getElementById(audioId);
-    
-        button.addEventListener('click', () => {
-          if (audio.paused) {
-            audio.play();
-            button.textContent = "Pause";
-          } else {
-            audio.pause();
-            button.textContent = "Play";
-          }
-        });
-
-              // Helper function to format time (e.g., 03:45)
-      function formatTime(seconds) {
-        const minutes = Math.floor(seconds / 60);
-        const remainingSeconds = Math.floor(seconds % 60);
-        const formattedSeconds = remainingSeconds < 10 ? '0' + remainingSeconds : remainingSeconds;
-        return minutes + ':' + formattedSeconds;
-      }
-    
-        // Optional: Display song duration
-        audio.addEventListener('loadedmetadata', () => {
-          const duration = formatTime(audio.duration);
-          const listItem = button.parentNode;
-          const durationSpan = document.createElement('span');
-          durationSpan.textContent = ` (${duration})`;
-          listItem.appendChild(durationSpan);
-        });
-    
-    
-        // Optional: Handle song ending
-        audio.addEventListener('ended', () => {
-           button.textContent = "Play"; // Reset button text
-        });
-    
-      });
-    
-
-    
-    </script>
 
 
-    <br>
     <!-- footer -->
+
     <footer>
+
         <br>
+
         <h3>𝕲𝕱𝕭</h3>
+
         <br>
+
     </footer>
 
-<!-- SCRIPTS -->
- <!--  <script>
-        window.onscroll = function() {myFunction()};
-        
-        var header = document.getElementById("h2");
-        var sticky = header.offsetTop;
-        
-        function myFunction() {
-          if (window.pageYOffset > sticky) {
-            header.classList.add("sticky");
-          } else {
-            header.classList.remove("sticky");
-          }
-        }
-        </script>-->
 
-        <!--stop play-->
+
+<!-- SCRIPTS -->
+
 <script>
-        document.addEventListener('play', function(e){
-            var audios = document.getElementsByTagName('audio');
-            for(var i = 0, len = audios.length; i < len;i++){
-                if(audios[i] != e.target){
-                    audios[i].pause();
-                }
-            }
-        }, true);
+
+  window.onscroll = function() {myFunction()};
+
+
+
+  var header = document.getElementById("h2");
+
+  var sticky = header.offsetTop;
+
+
+
+  function myFunction() {
+
+    if (window.pageYOffset > sticky) {
+
+      header.classList.add("sticky");
+
+    } else {
+
+      header.classList.remove("sticky");
+
+    }
+
+  }
+
 </script>
 
 
+
+<!-- audio player: play/pause, duration display, scrub slider, and
+
+     "only one track plays at a time" all live in one script so they
+
+     can share the same variables -->
+
 <script>
-    // ... (Previous JavaScript code) ...
-  
-    playButtons.forEach(button => {
-      // ... (Existing play/pause code) ...
-  
-      const audioId = button.dataset.track;
-      const audio = document.getElementById(audioId);
-      const slider = button.parentNode.querySelector('.slider'); // Get the slider for this song
-  
-      // Update slider as song plays
-      audio.addEventListener('timeupdate', () => {
-        if (!isNaN(audio.duration)) { // Check if duration is valid
-          const value = (100 / audio.duration) * audio.currentTime;
-          slider.value = value;
-        }
-      });
-  
-      // Move song position when slider is dragged
-      slider.addEventListener('input', () => {
-         if (!isNaN(audio.duration)) { // Check if duration is valid
-          const time = (slider.value / 100) * audio.duration;
-          audio.currentTime = time;
-        }
-      });
-  
-      // ... (Existing loadedmetadata and ended event handlers) ...
-  
+
+  const playlist = document.getElementById('playlist');
+
+  const playButtons = playlist.querySelectorAll('.playButton');
+
+
+
+  function formatTime(seconds) {
+
+    const minutes = Math.floor(seconds / 60);
+
+    const remainingSeconds = Math.floor(seconds % 60);
+
+    const formattedSeconds = remainingSeconds < 10 ? '0' + remainingSeconds : remainingSeconds;
+
+    return minutes + ':' + formattedSeconds;
+
+  }
+
+
+
+  playButtons.forEach(button => {
+
+    const audioId = button.dataset.track;
+
+    const audio = document.getElementById(audioId);
+
+    const slider = button.parentNode.querySelector('.slider');
+
+
+
+    button.addEventListener('click', () => {
+
+      if (audio.paused) {
+
+        audio.play();
+
+        button.textContent = "Pause";
+
+      } else {
+
+        audio.pause();
+
+        button.textContent = "Play";
+
+      }
+
     });
-  
-  
-  </script>
+
+
+
+    audio.addEventListener('loadedmetadata', () => {
+
+      const duration = formatTime(audio.duration);
+
+      const durationSpan = document.createElement('span');
+
+      durationSpan.textContent = ` (${duration})`;
+
+      button.parentNode.appendChild(durationSpan);
+
+    });
+
+
+
+    audio.addEventListener('ended', () => {
+
+      button.textContent = "Play";
+
+    });
+
+
+
+    // keep the slider in sync with playback position
+
+    audio.addEventListener('timeupdate', () => {
+
+      if (!isNaN(audio.duration)) {
+
+        slider.value = (100 / audio.duration) * audio.currentTime;
+
+      }
+
+    });
+
+
+
+    // let dragging the slider jump to that point in the track
+
+    slider.addEventListener('input', () => {
+
+      if (!isNaN(audio.duration)) {
+
+        audio.currentTime = (slider.value / 100) * audio.duration;
+
+      }
+
+    });
+
+  });
+
+
+
+  // pause every other track as soon as one starts playing
+
+  document.addEventListener('play', function (e) {
+
+    document.querySelectorAll('audio').forEach(a => {
+
+      if (a !== e.target) a.pause();
+
+    });
+
+  }, true);
+
+</script>
+
+
 
         </body>

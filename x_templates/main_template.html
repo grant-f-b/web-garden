@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+        <!-- basic meta data -->
+        <!-- TODO: set the browser-tab title -->
+        <title>PAGE TITLE</title>
+        <!-- TODO: one-sentence description of this page -->
+        <meta name="description" content="PAGE DESCRIPTION">
+        <meta name="author" content="grant">
+        <!-- standards -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- favicon -->
+        <link rel="apple-touch-icon" sizes="180x180" href="favicon_files/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon_files/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon_files/favicon-16x16.png">
+        <!-- OG social card data (shown when this link is shared elsewhere) -->
+        <meta property="og:title" content="PAGE TITLE">
+        <meta property="og:type" content="website">
+        <!-- TODO: set to this exact page's real URL on gfbald.win -->
+        <meta property="og:url" content="https://www.gfbald.win/PAGE_NAME.html">
+        <meta property="og:description" content="PAGE DESCRIPTION">
+        <!-- CSS: one shared stylesheet for the whole site -->
+        <link rel="stylesheet" type="text/css" href="css/css_main.css">
+	</head>
+ 
+<body>
+    <!-- header (identical on every page except the emoji + which nav link is "current") -->
+    <div class="h1" id="h2">
+    <header>
+        <br>
+        <!-- TODO: pick a small icon between the two rings that fits this page's theme -->
+        <h3>⎔ ⌂ ⎔</h3>
+        <a style="color: black; font-weight:bold" href="projects.html">things</a>
+        <a style="color: black; font-weight:bold" href="index.html">~𝖌𝖋𝖇~</a>
+        <a style="color: black; font-weight:bold" href="posts.html">writing</a>
+        <br>
+        <br>
+    </header></div>
+ 
+    <!-- content -->
+    <h1 style="text-align: center;"><u>PAGE TITLE</u></h1>
+    <br>
+ 
+    <!-- TODO: replace with this page's actual content -
+         a <table> like projects.html/posts.html, a gallery of <img> like
+         gifgallery.html, or a custom section like the sounds page. -->
+    <p style="margin-left: 15%; margin-right: 15%;">
+        page content goes here.
+    </p>
+ 
+    <br><br>
+ 
+    <!-- footer -->
+    <footer>
+        <br>
+        <h3>𝕲𝕱𝕭</h3>
+        <br>
+    </footer>
+ 
+<!-- SCRIPTS -->
+<script>
+  window.onscroll = function() {myFunction()};
+ 
+  var header = document.getElementById("h2");
+  var sticky = header.offsetTop;
+ 
+  function myFunction() {
+    if (window.pageYOffset > sticky) {
+      header.classList.add("sticky");
+    } else {
+      header.classList.remove("sticky");
+    }
+  }
+</script>
+ 
+</body>
+</html>

@@ -8,72 +8,112 @@
         <!-- standards -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- favicon -->
+        <!-- favicon (one level up, since this page lives in /text_files/) -->
         <link rel="apple-touch-icon" sizes="180x180" href="../favicon_files/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="../favicon_files/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="../favicon_files/favicon-16x16.png">
         <!-- OG social card data -->
         <meta property="og:title" content="site log">
         <meta property="og:type" content="website">
-        <meta property="og:url" content="https://">
+        <meta property="og:url" content="https://www.gfbald.win/text_files/sitelog_2.html">
         <meta property="og:description" content="a write-up on making this site">
-        <meta property="og:image" content="/!/image.png/!/">
-        <!-- CSS & other links -->
-        <link rel="stylesheet" href="../css/reset.css">
-        <link rel="stylesheet" type="text/css" href="../css/style.css">
-        <link rel="manifest" href="../css/site.webmanifest">
-
-        <!-- plain text style -->
+        <!-- CSS: same shared stylesheet, one level up -->
+        <link rel="stylesheet" type="text/css" href="../css/css_main.css">
+        <!-- page-specific styling -->
         <style>
-            body {
-                font-family: monospace; 
-                white-space: pre-wrap; 
-                line-height: 1.5; 
-                background-color: #fffcbd; /* background (optional) */
-                color: #000000; /* text color */
+            /* Apply pre-wrap strictly to the post content container to prevent header/footer distortion */
+            .post-body {
+                white-space: pre-wrap;
+                line-height: 1.5;
             }
-            a {
-                color: #a50AE6; /* Link color */
-                text-decoration: underline; /* Underline links */
+            .post-body a {
+                color: #a50AE6;
+                text-decoration: underline;
+            }
+            .post-body blockquote {
+                font-style: italic;
+                margin: 1rem 2rem;
+            }
+            .post-body pre {
+                font-family: monospace;
+                overflow-x: auto;
+                display: table;
+                margin: 1rem auto;
+                text-align: left;
+            }
+            .divider, .section-title {
+                text-align: center;
             }
         </style>
-        <!-- maybe move this to bottom of body -->
-        <script type="module" src="https://md-block.verou.me/md-block.js"></script>
 	</head>
-<body  style="margin: 5%;padding: 0px;">
-<h3 style="text-align: center; margin-bottom: 0;">⎔ ✎ ⎔</h3><p style="text-align: center;margin-top: 0;">
-~✎~✎~ SITE LOG #1 ~✎~✎~ 
+<body>
+    <!-- header -->
+    <div class="h1" id="h2">
+    <header>
+        <br>
+        <h3>⎔ ✎ ⎔</h3>
+        <a style="color: black; font-weight:bold" href="../projects.html">things</a>
+        <a style="color: black; font-weight:bold" href="../index.html">~𝖌𝖋𝖇~</a>
+        <a style="color: black; font-weight:bold" href="../posts.html">writing</a>
+        <br><br>
+    </header></div>
+ 
+    <!-- content container -->
+    <div class="post-body">
+<p class="divider">~✎~✎~ SITE LOG #1 ~✎~✎~</p>
 
-This is my first text post outlining the updates I have made to my site. I plan on keeping track of my goals for this site and logging my progress completing them in this series of posts. This one may be longer than any others in the future, as I have a lot to cover with going all the way back to the start. 
+<p>This is my first text post outlining the updates I have made to my site. I plan on keeping track of my goals for this site and logging my progress completing them in this series of posts. This one may be longer than any others in the future, as I have a lot to cover with going all the way back to the start.</p>
 
-The actual aspirations for a personal website of any sort like this began all the way back in high school when I imagined starting a creative project with my friends, anything from a webcomic to a blog of some sort to a creative hub space of some sort where we could host all of our projects like our music and stories and doodles. Then, during the last 4 years or so, I became much more interested in computers and the web. I also became very serious about note-taking and consistent with journaling. I also began working with web developers at my first full-time job. My journals and notes started spreading to text documents and spreadsheets. The next natural development was to create a personal hub, my own little slice of the internet, that I could keep some of my writings on. 
+<p>The actual aspirations for a personal website of any sort like this began all the way back in high school when I imagined starting a creative project with my friends, anything from a webcomic to a blog of some sort to a creative hub space of some sort where we could host all of our projects like our music and stories and doodles. Then, during the last 4 years or so, I became much more interested in computers and the web. I also became very serious about note-taking and consistent with journaling. I also began working with web developers at my first full-time job. My journals and notes started spreading to text documents and spreadsheets. The next natural development was to create a personal hub, my own little slice of the internet, that I could keep some of my writings on.</p>
 
-INSPIRATIONS.
+<p class="section-title">INSPIRATIONS.</p>
 
-I spent quite a bit of time in 2023 scouring the internet looking for interesting things to add to my reading lists and I often found myself in awe of many of these bloggers’ personal websites. Many of the sites that I found most interesting were more than occasionally in proximity from a post about the “small web.” The small web is a philosophy which deals with internet independence; bloggers creating their own personal spaces to host their creations. The small part comes from the fact that these sites are mostly very simple and lightweight; keeping the focus more on the content rather than the site itself. I even found myself coming back to sites like <a href="https://1mb.club/">1mb.club</a> and <a href="https://512kb.club/">512kb.club</a>, sites that collect and showcase other websites under 1mb or 512kb, and clicking through sometimes just to find inspiration for my site and other times hoping to find my next favorite blog post to read. Of course, it eventually takes skill when you cross a certain threshold down-scaling a website. Even my extremely basic html site is already 15mb+ at the time of writing this and has far less content than some of these sites that are less than 10kb. I actually don’t know how it’s possible. 
+<p>I spent quite a bit of time in 2023 scouring the internet looking for interesting things to add to my reading lists and I often found myself in awe of many of these bloggers’ personal websites. Many of the sites that I found most interesting were more than occasionally in proximity from a post about the “small web.” The small web is a philosophy which deals with internet independence; bloggers creating their own personal spaces to host their creations. The small part comes from the fact that these sites are mostly very simple and lightweight; keeping the focus more on the content rather than the site itself. I even found myself coming back to sites like <a href="https://1mb.club/">1mb.club</a> and <a href="https://512kb.club/">512kb.club</a>, sites that collect and showcase other websites under 1mb or 512kb, and clicking through sometimes just to find inspiration for my site and other times hoping to find my next favorite blog post to read. Of course, it eventually takes skill when you cross a certain threshold down-scaling a website. Even my extremely basic html site is already 15mb+ at the time of writing this and has far less content than some of these sites that are less than 10kb. I actually don’t know how it’s possible.</p>
 
-One of the first sites that inspired me was a software architect’s personal blog called <a href="https://sunny.gg">sunny.gg</a>. It appears he may have given up on this approach but at one point he had a more stripped down, basic html site and listed his posts in simple tables which maybe he decided looked like shit but I decided it was perfect for me. It seems to have disappeared with the redesigning of his site, but he had a post about making basic plain text posts that really resonated with me. Another site I completely fell in love with is <a href="https://cassidoo.co/blog/">cassidoo.co</a>. The way they highlight their links with randomized colors fascinated me. They also had a nice singe-column site design that looked perfect for mobile and desktop, which I suppose half the internet has moved onto now, if not more. The post that lead me to her site was about missing human curation, which also resonated with me. 
+<p>One of the first sites that inspired me was a software architect’s personal blog called <a href="https://sunny.gg">sunny.gg</a>. It appears he may have given up on this approach but at one point he had a more stripped down, basic html site and listed his posts in simple tables which maybe he decided looked like shit but I decided it was perfect for me. It seems to have disappeared with the redesigning of his site, but he had a post about making basic plain text posts that really resonated with me. Another site I completely fell in love with is <a href="https://cassidoo.co/blog/">cassidoo.co</a>. The way they highlight their links with randomized colors fascinated me. They also had a nice singe-column site design that looked perfect for mobile and desktop, which I suppose half the internet has moved onto now, if not more. The post that lead me to her site was about missing human curation, which also resonated with me.</p>
 
-Blog posts like those along with several others across the (small) web inspired me. If I’m going to scream into the void, why limit myself to a character count? More importantly, why limit myself to the restrictions of a twitter bio and profile page that is probably 99% similar to everyone else’s when I could build my own from scratch? It’s like your own personal MySpace page that you could easily link anywhere. Domains and hosting are insanely cheap. I’m surprised it isn’t more popular already but hopefully I’m just ahead of the trend. Mastodon and the Fediverse are probably growing pretty quickly but I’m not sure if most people I know would even know what those are yet, though. 
+<p>Blog posts like those along with several others across the (small) web inspired me. If I’m going to scream into the void, why limit myself to a character count? More importantly, why limit myself to the restrictions of a twitter bio and profile page that is probably 99% similar to everyone else’s when I could build my own from scratch? It’s like your own personal MySpace page that you could easily link anywhere. Domains and hosting are insanely cheap. I’m surprised it isn’t more popular already but hopefully I’m just ahead of the trend. Mastodon and the Fediverse are probably growing pretty quickly but I’m not sure if most people I know would even know what those are yet, though.</p>
 
-It was a <a href="https://moth.monster/">moth.monster</a> post that eventually gave me exactly what I needed to get me to finally open up VS Code and actually do something rather than just read about it for once. His post argued for everyone to build their own static html site just as I have been alluding to, and included a template and mini-tutorial for building an html home page to get your site off the ground. That just had an html page with a bit of text on it live in your browser so it took a bit of Google searching and handful of other tutorials for html site templates and html page head sections, but eventually I had my site at a point where I was ready to start adding content. 
+<p>It was a <a href="https://moth.monster/">moth.monster</a> post that eventually gave me exactly what I needed to get me to finally open up VS Code and actually do something rather than just read about it for once. His post argued for everyone to build their own static html site just as I have been alluding to, and included a template and mini-tutorial for building an html home page to get your site off the ground. That just had an html page with a bit of text on it live in your browser so it took a bit of Google searching and handful of other tutorials for html site templates and html page head sections, but eventually I had my site at a point where I was ready to start adding content.</p>
 
-[probably a good time to mention that I will not get around to crediting everyone who helped me build this site in my site log write-ups, but I will always keep a running list of all people who deserve credit helping me build this place in my ‘site notes’ at the bottom of my home page]
+<p>[probably a good time to mention that I will not get around to crediting everyone who helped me build this site in my site log write-ups, but I will always keep a running list of all people who deserve credit helping me build this place in my ‘site notes’ at the bottom of my home page]</p>
 
-PROGRESS.
+<p class="section-title">PROGRESS.</p>
 
-So I tinkered with gifs, because every static html site needs a few of them. It also gave me a good excuse to mess around with a few online tools like Decker and Pico-cad. I experimented with embedding cells from Google Sheets directly to my page, but settled with html-styled tables instead. I made some of my tables drop-down style, which was a big move forward for the site. I tried to make a tooltip for when you hover over the button that says "collapse/expand," but I could not figure that out. I could not figure out directed hover-over effects either but I am satisfied with the simple hover-over effects I currently have on the links all over my site. I also managed to make the header of the site sticky so it stays at the top when users scroll down, but I was unable to figure out how to make double sticky headers that stack onto one another. 
+<p>So I tinkered with gifs, because every static html site needs a few of them. It also gave me a good excuse to mess around with a few online tools like Decker and Pico-cad. I experimented with embedding cells from Google Sheets directly to my page, but settled with html-styled tables instead. I made some of my tables drop-down style, which was a big move forward for the site. I tried to make a tooltip for when you hover over the button that says "collapse/expand," but I could not figure that out. I could not figure out directed hover-over effects either but I am satisfied with the simple hover-over effects I currently have on the links all over my site. I also managed to make the header of the site sticky so it stays at the top when users scroll down, but I was unable to figure out how to make double sticky headers that stack onto one another.</p>
 
-Neocities was the first static-site hosting service I discovered and technically launched the initial version of this site on. It lasted about 24 hours before moving it over to Github Pages, and then my first site template there did not last long before I completely reworked my design. I ended up being quite content with my second template, which is pretty much what my site looks like today, so after a few weeks of working on that repository I decided to buy a custom domain through Porkbun. <a href="https://gfbald.win">gfbald.win</a> launched on March 10, 2024. Unfortunately the linking of my domain to my repository broke all my gifs so I have to figure that out still. 
+<p>Neocities was the first static-site hosting service I discovered and technically launched the initial version of this site on. It lasted about 24 hours before moving it over to Github Pages, and then my first site template there did not last long before I completely reworked my design. I ended up being quite content with my second template, which is pretty much what my site looks like today, so after a few weeks of working on that repository I decided to buy a custom domain through Porkbun. <a href="https://gfbald.win">gfbald.win</a> launched on March 10, 2024. Unfortunately the linking of my domain to my repository broke all my gifs so I have to figure that out still.</p>
 
-CURRENT SITE.
+<p class="section-title">CURRENT SITE.</p>
 
-The template for my site has gotten to a state where I feel really confident with it and so it is time to just fill it with stuff now. I think you could split most things I planned on doing on this site into two categories: 1. plain text style journal entry/blog posts and 2. other random shit I like to do, so I split my site into two main pages: things & writing. The header on top of every page links back to the home page, or those two pages. Writing includes all my text-based posts, mostly in plain txt but I may eventually write in html or markdown if I want to change up the style of the page or attachments to what I am writing about. Things links to all my other projects starting with my college football rating system and hopefully branching out to hosting my musical projects I have with my friends and other pc or tech-based projects I have here at home like desinging and building our LEGO house model, or scanning and archiving all of our family photos. Those are just some ideas for the future, I am focused on the football ratings now and sporadic writings, and I think that is enough for me. Perhaps I eventually create an independent site just for my football ratings and leave this one simmply for my writings, if I never end up hosting any projects here worth more than just one decent write-up. That is a thought for another day. □
+<p>The template for my site has gotten to a state where I feel really confident with it and so it is time to just fill it with stuff now. I think you could split most things I planned on doing on this site into two categories: 1. plain text style journal entry/blog posts and 2. other random shit I like to do, so I split my site into two main pages: things & writing. The header on top of every page links back to the home page, or those two pages. Writing includes all my text-based posts, mostly in plain txt but I may eventually write in html or markdown if I want to change up the style of the page or attachments to what I am writing about. Things links to all my other projects starting with my college football rating system and hopefully branching out to hosting my musical projects I have with my friends and other pc or tech-based projects I have here at home like desinging and building our LEGO house model, or scanning and archiving all of our family photos. Those are just some ideas for the future, I am focused on the football ratings now and sporadic writings, and I think that is enough for me. Perhaps I eventually create an independent site just for my football ratings and leave this one simmply for my writings, if I never end up hosting any projects here worth more than just one decent write-up. That is a thought for another day. □</p>
 
-<p style="text-align: center; font-weight: bold;">
-────────────────── <span style="color: #9acd32; font-weight: bolder;">❦</span> ──────────────────</p>
+<p class="divider">──────────────────<span style="color: #9acd32; font-weight: bolder;"> ❦</span> ──────────────────</p>
 <p style="text-align: center;">3/13/24</p>
 <p style="text-align: center;"> □ □ □ </p>
-</p>
-<!-- SCRIPTS --><script></script>
+    </div>
+ 
+    <!-- footer -->
+    <footer>
+        <br>
+        <h3>𝕲𝕱𝕭</h3>
+        <br>
+    </footer>
+ 
+<!-- SCRIPTS -->
+<script>
+  window.onscroll = function() {myFunction()};
+ 
+  var header = document.getElementById("h2");
+  var sticky = header.offsetTop;
+ 
+  function myFunction() {
+    if (window.pageYOffset > sticky) {
+      header.classList.add("sticky");
+    } else {
+      header.classList.remove("sticky");
+    }
+  }
+</script>
 </body>
+</html>
