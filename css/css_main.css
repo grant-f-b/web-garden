@@ -218,6 +218,17 @@ td, th {
   word-break: break-word;
 }
 
+/* Target the write-ups table specifically */
+.writeups-table td:nth-child(1),
+.writeups-table td:nth-child(2) {
+  white-space: nowrap;
+  width: 1%; /* Shrinks columns to fit content tight without wrapping */
+}
+
+.writeups-table td:nth-child(3) {
+  width: auto; /* Takes up all remaining table space and wraps text */
+}
+
 
 /* -------------------------------------------------------------------------
    7. RATINGS TABLES (used on PBQR pages, was style2.css)
